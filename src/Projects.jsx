@@ -1,32 +1,19 @@
 const Projects = () => {
 	return (
 		<section className="section" id="projects">
-			<h1 className="title title-large">Projects</h1>
+			<h2 className="title title-large">Projects</h2>
 			<div className="columns">
 				<ProjectCard
-					title="C++ Othello Engine"
-					description="A Dockerized C++ Othello game engine with negamax search, alpha-beta pruning, and multithreading."
-					tech_used={["C++", "Multithreading", "gprof"]}
-					link="https://github.com/AlexXLi12/othello-engine-grpc"
+					title="Glimpse"
+					description="Co-developed an AI-powered product video startup that transforms a one-sentence product description into a cinematic 12-second video using a MAS with GPT-5.1 and Sora-2-Pro agents. Implemented the core AI pipeline and backend, orchestrating GPT-5.1 agents to Sora-2-Pro through a Python/OpenAI SDK stack to generate structured prompts and production-ready video outputs."
+					tech_used={["Python", "OpenAI SDK", "GPT-5.1", "Sora-2-Pro"]}
+					link="https://tryglimpse.dev/"
 				/>
 				<ProjectCard
-					title="Renaissance Research"
-					description="A web app that helps researchers find novel applications for old/overlooked research. Won the Best use of AI and Best Finance/Data Analytics Project awards at HackTech 2025."
-					tech_used={[
-						"Next.js",
-						"React.js",
-						"BeautifulSoup",
-						"Google Gemini API",
-						"Pydantic",
-					]}
-					link="https://renresearch.co"
-				/>
-				<ProjectCard
-					title="ConsciousCapital"
-					description="A web-app that creates a stock portfolio for users based on sector, individual companies' progressiveness/social values, and risk tolerance. 
-					Won the Best Web Hack award at HackTJ 10.0."
-					tech_used={["Flask", "Numpy", "Pandas", "Bootstrap"]}
-					link="https://github.com/AlexXLi12/ConsciousCapital"
+					title="SoccerBot"
+					description="Built a lightweight RAG pipeline through retrieval over curated league data using Python and CSV-based search, enabling context-aware LLM predictions. Created a UI through Streamlit with dropdown-driven team selection and RAG-backed retrieval logic, improving reliability with robust error handling for missing historical data."
+					tech_used={["Python", "RAG", "Streamlit", "LLMs"]}
+					link="https://github.com/yahya3867/SoccerBot"
 				/>
 			</div>
 		</section>
@@ -35,9 +22,9 @@ const Projects = () => {
 
 const ProjectCard = ({ title, description, tech_used, link }) => {
 	return (
-			<div className="card project-card">
+		<div className="card project-card">
 			<div className="card-content">
-				<h1 className="title title-medium">{title}</h1>
+				<h3 className="title title-medium">{title}</h3>
 				<p className="card-description">{description}</p>
 				<h4>Technologies Used:</h4>
 				<ul className="list">

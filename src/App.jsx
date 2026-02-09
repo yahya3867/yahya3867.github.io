@@ -1,18 +1,42 @@
-import "./AppDark.css";
+import { useState, useEffect } from "react";
+import "./App.css";
 import About from "./About";
 import Projects from "./Projects";
 import Navbar from "./Navbar";
 import News from "./News";
+import Publications from "./Publications";
+import CV from "./CV";
 import Resume from "./Resume";
+
 const App = () => {
+	const [theme, setTheme] = useState(() => {
+		return localStorage.getItem("theme") || "light";
+	});
+
+	useEffect(() => {
+		document.documentElement.setAttribute("data-theme", theme);
+		localStorage.setItem("theme", theme);
+	}, [theme]);
+
+	const toggleTheme = () => {
+		setTheme((prev) => (prev === "light" ? "dark" : "light"));
+	};
+
 	return (
-		<div>
-			<Navbar />
-			<About />
-			<News />
-			<Projects />
-			<Resume />
-		</div>
+		<>
+			<a href="#about" className="skip-link">
+				Skip to main content
+			</a>
+			<Navbar theme={theme} toggleTheme={toggleTheme} />
+			<main>
+				<About />
+				<News />
+				<Publications />
+				<Projects />
+				<Resume />
+				<CV />
+			</main>
+		</>
 	);
 };
 export default App;

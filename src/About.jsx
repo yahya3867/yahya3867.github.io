@@ -3,66 +3,66 @@ const About = () => {
 		<section className="section" id="about">
 			<div className="about-container">
 				<figure className="about-image">
-					<img src="./images/portrait.jpg" alt="Portrait" />
+					<img src="./images/updatedpfp.png" alt="Yahya Masri" width="280" height="280" />
 				</figure>
 				<div className="about-content">
-					<h1 className="title">Alex Li</h1>
-					<h3 className="subtitle">Distributed Systems and Database Internals</h3>
+					<h1 className="title">Yahya Masri</h1>
+					<p className="subtitle">AI Evaluation & Digital Twins</p>
 					<p>
-						Hi, my name is Alex and I'm a third year student studying computer
-						science at the University of Washington.
-						<br />
-						I'm broadly interested in low level programming, distributed systems, and
-						data infrastructure.
-						<br />
-						This winter/spring, I'll be interning at Rubrik, and
-            this summer I'll be interning at Oracle on the AI and Data Engines team.
-						<br />
-						<br />
+						Hi, my name is Yahya and I'm a third year student studying
+						computer science at George Mason University.
 					</p>
-					<h3 className="subtitle">What I'm Working On:</h3>
+					<p>
+						I'm broadly interested in evaluating language models on
+						domain-specific tasks, digital twins, and their intersection.
+					</p>
+					<p>
+						This spring, I'll be interning at Lillup as an AI Software
+						Engineer, and this summer I'll be interning at ___.
+					</p>
+					<h2 className="subtitle" style={{ marginTop: "1.5rem" }}>What I'm Working On</h2>
 					<div className="about-project-desc">
 						<p className="about-project-text">
-              Reading up on database internals and distributed systems concepts (DDIA and Database Internals). <br />
-							Building an Othello Game Engine in C++. The goal of this project <br />
-							is to reimplement an engine I wrote in Python, but with a focus on <br />
-							optimizing the performance of the engine using bitboards and concurrency.<br />
+							Research @ the Spatiotemporal Innovation Center on a
+							Computing Infrastructure Digital Twin.
+						</p>
+						<p className="about-project-text">
+							Working on a Human Digital Twin @ Lillup.
+						</p>
+						<p className="about-project-text">
+							Teaching C and Low-level Systems as a TA for CS262.
 						</p>
 					</div>
 					<div className="about-links">
 						<a
-							href="https://github.com/AlexXLi12"
+							href="https://github.com/yahya3867"
 							target="_blank"
 							rel="noopener noreferrer"
+							aria-label="GitHub"
+							className="about-icon-link"
 						>
-							<img
-								className="about-icon"
-								src="./images/github.svg"
-								alt="Github"
-								onMouseEnter={(e) => {
-									e.target.src = "./images/github_hover.svg";
-								}}
-								onMouseLeave={(e) => {
-									e.target.src = "./images/github.svg";
-								}}
-							/>
+							<img className="about-icon about-icon-default" src="./images/github.svg" alt="" width="36" height="36" aria-hidden="true" />
+							<img className="about-icon about-icon-hover" src="./images/github_hover.svg" alt="" width="36" height="36" aria-hidden="true" />
 						</a>
 						<a
-							href="https://www.linkedin.com/in/alex-li12"
+							href="https://www.linkedin.com/in/yahya-masri/"
 							target="_blank"
 							rel="noopener noreferrer"
+							aria-label="LinkedIn"
+							className="about-icon-link"
 						>
-							<img
-								className="about-icon"
-								src="./images/linkedin.svg"
-								alt="LinkedIn"
-								onMouseEnter={(e) => {
-									e.target.src = "./images/linkedin_hover.svg";
-								}}
-								onMouseLeave={(e) => {
-									e.target.src = "./images/linkedin.svg";
-								}}
-							/>
+							<img className="about-icon about-icon-default" src="./images/linkedin.svg" alt="" width="36" height="36" aria-hidden="true" />
+							<img className="about-icon about-icon-hover" src="./images/linkedin_hover.svg" alt="" width="36" height="36" aria-hidden="true" />
+						</a>
+						<a
+							href="https://scholar.google.com/citations?user=9H1ryOAAAAAJ&hl=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label="Google Scholar"
+							className="about-icon-link"
+						>
+							<img className="about-icon about-icon-default" src="./images/scholar.svg" alt="" width="36" height="36" aria-hidden="true" />
+							<img className="about-icon about-icon-hover" src="./images/scholar_hover.svg" alt="" width="36" height="36" aria-hidden="true" />
 						</a>
 					</div>
 				</div>
