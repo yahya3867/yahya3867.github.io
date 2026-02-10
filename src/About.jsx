@@ -7,7 +7,7 @@ const About = () => {
 				</figure>
 				<div className="about-content">
 					<h1 className="title">Yahya Masri</h1>
-					<p className="subtitle">AI Evaluation & Digital Twins</p>
+					<h2 className="subtitle">AI Evaluation & Digital Twins</h2>
 					<p>
 						Hi, my name is Yahya and I'm a third year student studying
 						computer science at George Mason University.
