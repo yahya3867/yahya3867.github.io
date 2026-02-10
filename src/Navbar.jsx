@@ -26,7 +26,6 @@ const Navbar = ({ theme, toggleTheme }) => {
 			<a href="#publications">Publications</a>
 			<a href="#projects">Projects</a>
 			<a href="#resume">Resume</a>
-			<a href="#cv">CV</a>
 			<button
 				className="theme-toggle"
 				onClick={toggleTheme}

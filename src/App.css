@@ -219,7 +219,7 @@ nav a:hover {
 }
 
 .about-content .title {
-	margin-bottom: 0.25rem;
+	margin-bottom: 0.5rem;
 	font-size: clamp(1.875rem, 3.5vw, 2.5rem);
 }
 

@@ -6,7 +6,7 @@ const News = () => {
 			date: "January 2026",
 			description: (
 				<>
-					Accepted an AI Software Engineer Internship at <strong>Lillup</strong>.
+					Accepted an AI Software Engineer Internship at Lillup.
 				</>
 			),
 		},
@@ -20,7 +20,7 @@ const News = () => {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						"Benchmarking Small Language Models on System Log Severity Classification"
+						"Benchmarking Small Language Models and Small Reasoning Language Models on System Log Severity Classification"
 					</a>{" "}
 					on arXiv.
 				</>
@@ -30,14 +30,13 @@ const News = () => {
 			date: "July 2025",
 			description: (
 				<>
-					Paper published in the{" "}
-					<strong>International Journal of Digital Earth</strong>:{" "}
+					Paper published in the International Journal of Digital Earth:{" "}
 					<a
 						href="https://www.tandfonline.com/doi/full/10.1080/17538947.2025.2521786"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						"Optimizing Context-Based Location Extraction by Tuning Open-Source LLMs with RAG."
+						"Optimizing context-based location extraction by tuning open-source LLMs with RAG."
 					</a>
 				</>
 			),

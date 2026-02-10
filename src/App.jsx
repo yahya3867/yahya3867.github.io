@@ -5,7 +5,6 @@ import Projects from "./Projects";
 import Navbar from "./Navbar";
 import News from "./News";
 import Publications from "./Publications";
-import CV from "./CV";
 import Resume from "./Resume";
 
 const App = () => {
@@ -34,7 +33,6 @@ const App = () => {
 				<Publications />
 				<Projects />
 				<Resume />
-				<CV />
 			</main>
 		</>
 	);
