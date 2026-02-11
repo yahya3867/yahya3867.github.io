@@ -27,7 +27,7 @@ const About = () => {
 							Computing Infrastructure Digital Twin.
 						</p>
 						<p className="about-project-text">
-							Working on a Human Digital Twin @ Lillup.
+							Working on a Digital Human Twin @ Lillup.
 						</p>
 						<p className="about-project-text">
 							Teaching C and Low-level Systems as a TA for CS262.
