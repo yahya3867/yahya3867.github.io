@@ -1,3 +1,5 @@
+import { NavAscii } from "./components/nav-ascii"
+
 const SunIcon = () => (
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
 		<circle cx="12" cy="12" r="5" />
@@ -21,6 +23,7 @@ const MoonIcon = () => (
 const Navbar = ({ theme, toggleTheme }) => {
 	return (
 		<nav aria-label="Main navigation">
+			<NavAscii theme={theme} />
 			<a href="#about">About</a>
 			<a href="#news">News</a>
 			<a href="#publications">Publications</a>

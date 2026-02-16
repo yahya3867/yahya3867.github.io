@@ -169,6 +169,20 @@ nav a:hover {
 	border-color: var(--text);
 }
 
+/* ── Nav ASCII ──────────────────────────────────────── */
+
+.nav-ascii {
+	position: absolute;
+	left: clamp(1.25rem, 5vw, 2.5rem);
+	width: 61px;
+	height: 61px;
+	overflow: hidden;
+}
+
+.nav-ascii canvas {
+	display: block;
+}
+
 /* ── Theme Toggle ───────────────────────────────────── */
 
 .theme-toggle {
