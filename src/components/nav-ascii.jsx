@@ -1,23 +1,20 @@
-import { useState, useEffect, useRef } from "react"
+import { Suspense, useState, useEffect, useRef } from "react"
 import { Canvas, useFrame } from "@react-three/fiber"
 import { EffectComposer } from "@react-three/postprocessing"
+import { useGLTF } from "@react-three/drei"
 import { Vector2 } from "three"
 import { AsciiEffect } from "./ascii-effect"
 
 function RotatingMesh() {
-	const meshRef = useRef()
+	const groupRef = useRef()
+	const { scene } = useGLTF("https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/main/2.0/Duck/glTF-Binary/Duck.glb")
+
 	useFrame((_, delta) => {
-		if (meshRef.current) {
-			meshRef.current.rotation.x += delta * 0.5
-			meshRef.current.rotation.y += delta * 0.7
+		if (groupRef.current) {
+			groupRef.current.rotation.y += delta * 0.7
 		}
 	})
-	return (
-		<mesh ref={meshRef} scale={1}>
-			<torusKnotGeometry args={[0.6, 0.25, 64, 12]} />
-			<meshStandardMaterial color="#ea580c" roughness={0.3} metalness={0.1} />
-		</mesh>
-	)
+	return <primitive ref={groupRef} object={scene} scale={1.4} position={[0, -1.1, 0]} />
 }
 
 export function NavAscii({ theme }) {
@@ -37,14 +34,16 @@ export function NavAscii({ theme }) {
 			className="nav-ascii"
 		>
 			<Canvas
-				camera={{ position: [0, 0, 3], fov: 50 }}
+				camera={{ position: [0, 0, 3.5], fov: 50 }}
 				gl={{ antialias: false, alpha: true }}
 				dpr={1}
 				style={{ background: "transparent" }}
 			>
 				<hemisphereLight intensity={0.5} />
 				<directionalLight position={[5, 5, 5]} intensity={2} />
-				<RotatingMesh />
+				<Suspense fallback={null}>
+					<RotatingMesh />
+				</Suspense>
 				<EffectComposer>
 					<AsciiEffect
 						style="standard"

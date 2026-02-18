@@ -4,6 +4,12 @@ const Projects = () => {
 			<h2 className="title title-large">Projects</h2>
 			<div className="columns">
 				<ProjectCard
+					title="s24"
+					description="Built a 24/7 autonomous Solana trading agent that combines trade orchestration, risk-aware execution, market data ingestion, and a real-time operational dashboard. Won [MLH] Best Use of Solana at HackFax x PatriotHacks 2026."
+					tech_used={["TypeScript", "Next.js", "Express", "PostgreSQL", "AWS", "Solana"]}
+					link="https://github.com/akshithambekar/s24"
+				/>
+				<ProjectCard
 					title="Glimpse"
 					description="Co-developed an AI-powered product video startup that transforms a one-sentence product description into a cinematic 12-second video using a MAS with GPT-5.1 and Sora-2-Pro agents. Implemented the core AI pipeline and backend, orchestrating GPT-5.1 agents to Sora-2-Pro through a Python/OpenAI SDK stack to generate structured prompts and production-ready video outputs."
 					tech_used={["Python", "OpenAI SDK", "GPT-5.1", "Sora-2-Pro"]}

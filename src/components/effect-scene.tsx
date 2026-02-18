@@ -46,9 +46,9 @@ export function EffectScene() {
     <div ref={containerRef} style={{ width: "100%", height: "100vh" }}>
       <Canvas
         camera={{ position: [0, 0, 5], fov: 50 }}
-        style={{ background: "#ffffff" }}
+        style={{ background: "#5c5c5c" }}
       >
-        <color attach="background" args={["#ffffff"]} />
+        <color attach="background" args={["#5c5c5c"]} />
 
         {/* Lighting */}
         <hemisphereLight intensity={0.5} />
@@ -57,8 +57,8 @@ export function EffectScene() {
 
         {/* 3D Model */}
         <mesh scale={1} rotation={[0, 0, 0]}>
-          <torusKnotGeometry args={[0.8, 0.3, 100, 16]} />
-          <meshStandardMaterial color="#ff6a00" roughness={0.3} metalness={0.1} />
+          <torusGeometry args={[1, 0.4, 16, 100]} />
+          <meshStandardMaterial color="#917aff" roughness={0.3} metalness={0.1} />
         </mesh>
 
         <OrbitControls enableDamping enableZoom={true} />

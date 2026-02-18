@@ -3,6 +3,22 @@ import Event from "./Event";
 const News = () => {
 	const events = [
 		{
+			date: "February 2026",
+			description: (
+				<>
+					Won [MLH] Best Use of Solana at HackFax x PatriotHacks 2026 for{" "}
+					<a
+						href="https://lnkd.in/eU4vBiP2"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						s24
+					</a>
+					, a fully autonomous OpenClaw AI agent that trades on Solana.
+				</>
+			),
+		},
+		{
 			date: "January 2026",
 			description: (
 				<>
