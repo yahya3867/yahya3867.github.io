@@ -6,7 +6,7 @@ const Projects = () => {
 				<ProjectCard
 					title="s24"
 					description="Built a 24/7 autonomous Solana trading agent that combines trade orchestration, risk-aware execution, market data ingestion, and a real-time operational dashboard. Won [MLH] Best Use of Solana at HackFax x PatriotHacks 2026."
-					tech_used={["TypeScript", "Next.js", "Express", "PostgreSQL", "AWS", "Solana"]}
+					tech_used={["OpenClaw", "AWS EC2", "AWS Bedrock", "PostgreSQL", "Solana"]}
 					link="https://github.com/akshithambekar/s24"
 				/>
 				<ProjectCard

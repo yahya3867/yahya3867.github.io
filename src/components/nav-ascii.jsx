@@ -2,12 +2,38 @@ import { Suspense, useState, useEffect, useRef } from "react"
 import { Canvas, useFrame } from "@react-three/fiber"
 import { EffectComposer } from "@react-three/postprocessing"
 import { useGLTF } from "@react-three/drei"
-import { Vector2 } from "three"
+import { Vector2, Color } from "three"
 import { AsciiEffect } from "./ascii-effect"
 
-function RotatingMesh() {
+const RANDOM_COLORS = ["#ff3e3e", "#3effb0", "#3eaaff", "#ff3ef5", "#fff93e", "#ff893e"]
+
+function RotatingMesh({ flash }) {
 	const groupRef = useRef()
 	const { scene } = useGLTF("https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/main/2.0/Duck/glTF-Binary/Duck.glb")
+	const originalColors = useRef([])
+
+	useEffect(() => {
+		const meshes = []
+		scene.traverse((child) => {
+			if (child.isMesh && child.material) {
+				meshes.push({ material: child.material, color: child.material.color.clone() })
+			}
+		})
+		originalColors.current = meshes
+	}, [scene])
+
+	useEffect(() => {
+		if (!flash) {
+			originalColors.current.forEach(({ material, color }) => {
+				material.color.copy(color)
+			})
+			return
+		}
+		const randomColor = new Color(RANDOM_COLORS[Math.floor(Math.random() * RANDOM_COLORS.length)])
+		originalColors.current.forEach(({ material }) => {
+			material.color.copy(randomColor)
+		})
+	}, [flash])
 
 	useFrame((_, delta) => {
 		if (groupRef.current) {
@@ -20,6 +46,12 @@ function RotatingMesh() {
 export function NavAscii({ theme }) {
 	const containerRef = useRef(null)
 	const [resolution, setResolution] = useState(new Vector2(40, 40))
+	const [flash, setFlash] = useState(false)
+
+	const handleClick = () => {
+		setFlash(true)
+		setTimeout(() => setFlash(false), 400)
+	}
 
 	useEffect(() => {
 		if (containerRef.current) {
@@ -32,6 +64,8 @@ export function NavAscii({ theme }) {
 		<div
 			ref={containerRef}
 			className="nav-ascii"
+			onClick={handleClick}
+			style={{ cursor: "pointer" }}
 		>
 			<Canvas
 				camera={{ position: [0, 0, 3.5], fov: 50 }}
@@ -42,7 +76,7 @@ export function NavAscii({ theme }) {
 				<hemisphereLight intensity={0.5} />
 				<directionalLight position={[5, 5, 5]} intensity={2} />
 				<Suspense fallback={null}>
-					<RotatingMesh />
+					<RotatingMesh flash={flash} />
 				</Suspense>
 				<EffectComposer>
 					<AsciiEffect
