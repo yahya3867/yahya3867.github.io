@@ -18,7 +18,7 @@ const About = () => {
 					</p>
 					<p>
 						This spring, I'll be interning at Lillup as an AI Software
-						Engineer, and this summer I'll be interning at ___.
+						Engineer, and this summer I'll be interning at SAP NS2 as a Language Model Intern.
 					</p>
 					<h2 className="subtitle" style={{ marginTop: "2.25rem" }}>What I'm Working On</h2>
 					<div className="about-project-desc">
