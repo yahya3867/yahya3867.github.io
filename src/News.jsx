@@ -6,6 +6,14 @@ const News = () => {
 			date: "February 2026",
 			description: (
 				<>
+					Accepted a Language Model Intern role at SAP NS2.
+				</>
+			),
+		},
+		{
+			date: "February 2026",
+			description: (
+				<>
 					Won [MLH] Best Use of Solana at HackFax x PatriotHacks 2026 for{" "}
 					<a
 						href="https://lnkd.in/eU4vBiP2"
