@@ -19,6 +19,7 @@ const PROJECTS = [
 			{ label: "GitHub", href: "https://github.com/akshithambekar/s24" },
 			{ label: "Devpost", href: "https://devpost.com/software/s24" },
 		],
+		images: ["/images/s24.jpg"],
 	},
 	{
 		title: "Glimpse",
