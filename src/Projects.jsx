@@ -4,6 +4,13 @@ const Projects = () => {
 			<h2 className="title title-large">Projects</h2>
 			<div className="columns">
 				<ProjectCard
+					title="Athena"
+					description="Built an always-on voice assistant running on a Raspberry Pi Zero 2 W with a Whisplay HAT. Press-to-talk records audio, transcribes with gpt-4o-mini-transcribe, routes intent with gpt-5-mini, streams a reply from gpt-5.4 (with optional web search), speaks via gpt-4o-mini-tts, and renders images full-screen with gpt-image-1.5. Ships as a systemd service that auto-starts on boot."
+					tech_used={["Python", "OpenAI API", "Raspberry Pi", "gpt-4o-mini", "gpt-image-1.5", "systemd"]}
+					link="https://github.com/yahya3867/athena"
+					image="/images/athena1.jpeg"
+				/>
+				<ProjectCard
 					title="s24"
 					description="Built a 24/7 autonomous Solana trading agent that combines trade orchestration, risk-aware execution, market data ingestion, and a real-time operational dashboard. Won [MLH] Best Use of Solana at HackFax x PatriotHacks 2026."
 					tech_used={["OpenClaw", "AWS EC2", "AWS Bedrock", "PostgreSQL", "Solana"]}
@@ -26,9 +33,16 @@ const Projects = () => {
 	);
 };
 
-const ProjectCard = ({ title, description, tech_used, link }) => {
+const ProjectCard = ({ title, description, tech_used, link, image }) => {
 	return (
 		<div className="card project-card">
+			{image && (
+				<div className="card-image">
+					<figure className="image">
+						<img src={image} alt={title} style={{ objectFit: "cover", maxHeight: "200px", width: "100%" }} />
+					</figure>
+				</div>
+			)}
 			<div className="card-content">
 				<h3 className="title title-medium">{title}</h3>
 				<p className="card-description">{description}</p>
