@@ -26,7 +26,7 @@ const Publications = () => {
 			venue: "International Journal of Digital Earth",
 			year: "2025",
 			link: "https://www.tandfonline.com/doi/full/10.1080/17538947.2025.2521786",
-			citations: 6,
+			citations: 7,
 		},
 	];
 
@@ -34,7 +34,7 @@ const Publications = () => {
 		<section className="section" id="publications">
 			<h2 className="title title-large">Publications</h2>
 			<p className="pub-summary">
-				4 publications &middot; 8 citations &middot;{" "}
+				4 publications &middot; 9 citations &middot;{" "}
 				<a
 					href="https://scholar.google.com/citations?user=9H1ryOAAAAAJ&hl=en"
 					target="_blank"
