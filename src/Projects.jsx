@@ -3,7 +3,18 @@ const PROJECTS = [
 		title: "Athena",
 		description:
 			"Built an always-on voice assistant running on a Raspberry Pi Zero 2 W with a Whisplay HAT. Press-to-talk records audio, transcribes with gpt-4o-mini-transcribe, routes intent with gpt-5-mini, streams a reply from gpt-5.4 (with optional web search), speaks via gpt-4o-mini-tts, and renders images full-screen with gpt-image-1.5. Ships as a systemd service that auto-starts on boot.",
-		techUsed: ["Python", "OpenAI API", "Raspberry Pi", "gpt-4o-mini", "gpt-image-1.5", "systemd"],
+		techUsed: [
+			"Python",
+			"Raspberry Pi Zero 2 W",
+			"Whisplay HAT",
+			"OpenAI API",
+			"gpt-4o-mini-transcribe",
+			"gpt-5-mini",
+			"gpt-5.4",
+			"gpt-4o-mini-tts",
+			"gpt-image-1.5",
+			"systemd",
+		],
 		links: [
 			{ label: "GitHub", href: "https://github.com/yahya3867/athena" },
 			{ label: "Devpost", href: "https://devpost.com/software/demo-e2sd8z" },
