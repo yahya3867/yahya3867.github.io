@@ -17,8 +17,7 @@ const About = () => {
 						domain-specific tasks, digital twins, and their intersection.
 					</p>
 					<p>
-						This spring, I'll be interning at Lillup as an AI Software
-						Engineer, and this summer I'll be interning at SAP NS2 as a Language Model Intern.
+						This summer, I'll be interning at SAP NS2 as a Language Model Intern.
 					</p>
 					<h2 className="subtitle" style={{ marginTop: "2.25rem" }}>What I'm Working On</h2>
 					<div className="about-project-desc">
@@ -27,7 +26,7 @@ const About = () => {
 							Computing Infrastructure Digital Twin.
 						</p>
 						<p className="about-project-text">
-							Working on a Digital Human Twin @ Lillup.
+							Building Vision-Language-Action models from first principles @ <a href="https://simplevla.com" target="_blank" rel="noopener noreferrer">SimpleVLA</a>.
 						</p>
 						<p className="about-project-text">
 							Teaching C and Low-level Systems as a TA for CS262.

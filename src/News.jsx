@@ -30,14 +30,6 @@ const News = () => {
 			date: "January 2026",
 			description: (
 				<>
-					Accepted an AI Software Engineer Internship at Lillup.
-				</>
-			),
-		},
-		{
-			date: "January 2026",
-			description: (
-				<>
 					Published preprint{" "}
 					<a
 						href="https://arxiv.org/abs/2601.07790"
