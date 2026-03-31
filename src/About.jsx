@@ -20,18 +20,18 @@ const About = () => {
 						This summer, I'll be interning at SAP NS2 as a Language Model Intern.
 					</p>
 					<h2 className="subtitle" style={{ marginTop: "2.25rem" }}>What I'm Working On</h2>
-					<div className="about-project-desc">
-						<p className="about-project-text">
+					<ul className="about-project-list">
+						<li className="about-project-item">
 							Research @ the Spatiotemporal Innovation Center on a
 							Computing Infrastructure Digital Twin.
-						</p>
-						<p className="about-project-text">
+						</li>
+						<li className="about-project-item">
 							Building Vision-Language-Action models from first principles @ <a href="https://simplevla.com" target="_blank" rel="noopener noreferrer">SimpleVLA</a>.
-						</p>
-						<p className="about-project-text">
+						</li>
+						<li className="about-project-item">
 							Teaching C and Low-level Systems as a TA for CS262.
-						</p>
-					</div>
+						</li>
+					</ul>
 					<div className="about-links">
 						<a
 							href="https://github.com/yahya3867"

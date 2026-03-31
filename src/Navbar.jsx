@@ -1,4 +1,4 @@
-import { NavAscii } from "./components/nav-ascii"
+import { useState, useEffect } from "react";
 
 const SunIcon = () => (
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -20,15 +20,38 @@ const MoonIcon = () => (
 	</svg>
 );
 
+const SECTIONS = ["about", "news", "publications", "projects", "resume"];
+
 const Navbar = ({ theme, toggleTheme }) => {
+	const [active, setActive] = useState("about");
+
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						setActive(entry.target.id);
+					}
+				});
+			},
+			{ rootMargin: "-40% 0px -55% 0px" }
+		);
+
+		SECTIONS.forEach((id) => {
+			const el = document.getElementById(id);
+			if (el) observer.observe(el);
+		});
+
+		return () => observer.disconnect();
+	}, []);
+
 	return (
 		<nav aria-label="Main navigation">
-			<NavAscii theme={theme} />
-			<a href="#about">About</a>
-			<a href="#news">News</a>
-			<a href="#publications">Publications</a>
-			<a href="#projects">Projects</a>
-			<a href="#resume">Resume</a>
+			{SECTIONS.map((id) => (
+				<a key={id} href={`#${id}`} className={active === id ? "active" : ""}>
+					{id.charAt(0).toUpperCase() + id.slice(1)}
+				</a>
+			))}
 			<button
 				className="theme-toggle"
 				onClick={toggleTheme}
