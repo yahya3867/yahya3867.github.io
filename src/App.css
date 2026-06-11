@@ -206,6 +206,14 @@ nav a.active {
 	height: 16px;
 }
 
+@media (max-width: 540px) {
+	nav {
+		padding-left: 1rem;
+		padding-right: 3.5rem;
+		gap: 0.875rem 1.25rem;
+	}
+}
+
 /* ── About Section ───────────────────────────────────── */
 
 .about-container {
@@ -733,6 +741,10 @@ html, body {
 /* ── Reduced Motion ──────────────────────────────────── */
 
 @media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
 	*,
 	*::before,
 	*::after {

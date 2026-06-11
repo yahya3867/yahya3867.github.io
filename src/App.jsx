@@ -9,12 +9,18 @@ import Resume from "./Resume";
 
 const App = () => {
 	const [theme, setTheme] = useState(() => {
-		return localStorage.getItem("theme") || "light";
+		const stored = localStorage.getItem("theme");
+		if (stored) return stored;
+		return window.matchMedia("(prefers-color-scheme: dark)").matches
+			? "dark"
+			: "light";
 	});
 
 	useEffect(() => {
 		document.documentElement.setAttribute("data-theme", theme);
 		localStorage.setItem("theme", theme);
+		const meta = document.querySelector('meta[name="theme-color"]');
+		if (meta) meta.setAttribute("content", theme === "dark" ? "#171412" : "#fafaf9");
 	}, [theme]);
 
 	const toggleTheme = () => {
@@ -36,9 +42,13 @@ const App = () => {
 			</main>
 			<footer className="site-footer">
 				<img
-					src="/images/Scene.png"
+					src="/images/Scene.jpg"
 					alt="Decorative painting of mountain goats on a hillside"
 					className="footer-image"
+					width="1920"
+					height="1433"
+					loading="lazy"
+					decoding="async"
 				/>
 				<div className="footer-overlay">
 					<div className="footer-buttons">
