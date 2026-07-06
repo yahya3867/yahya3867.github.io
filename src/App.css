@@ -267,6 +267,17 @@ nav a.active::after {
 	line-height: 1.75;
 }
 
+.about-content p strong,
+.about-project-item strong {
+	color: var(--text);
+	font-weight: 600;
+}
+
+.about-project-item em {
+	font-style: italic;
+	color: var(--text-tertiary);
+}
+
 .about-project-list {
 	list-style: none;
 	padding: 0;
@@ -758,83 +769,173 @@ nav a.active::after {
 	transition: border-color 0.3s ease;
 }
 
-/* ── Footer ─────────────────────────────────────────── */
-
-.site-footer {
-	position: relative;
-	margin-top: 4rem;
-	margin-bottom: 0;
-	line-height: 0;
-	overflow: hidden;
-}
+/* ── Footer (inverted contact) ──────────────────────── */
 
 html, body {
 	overscroll-behavior: none;
 }
 
-.footer-image {
-	width: 100%;
-	height: auto;
-	display: block;
+.site-footer {
+	margin-top: 4rem;
+	background: #1c1917;
+	color: #fafaf9;
 }
 
-.footer-overlay {
-	position: absolute;
-	bottom: 1.5rem;
-	left: 0;
-	right: 0;
+[data-theme="dark"] .site-footer {
+	background: #100e0c;
+}
+
+.footer-inner {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: clamp(3rem, 7vw, 5rem) clamp(1.25rem, 5vw, 3rem) clamp(2.5rem, 5vw, 4rem);
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	gap: clamp(2rem, 5vw, 4.5rem);
+	align-items: end;
+}
+
+.footer-marker {
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 0.75rem;
-	line-height: 1.5;
-}
-
-.footer-buttons {
-	display: flex;
-	align-items: center;
-	gap: 3rem;
-}
-
-.footer-glass-btn {
+	align-items: baseline;
+	gap: 1em;
+	margin: 0 0 1.5rem;
+	padding-bottom: 0.75rem;
+	border-bottom: 1px solid rgba(250, 250, 249, 0.3);
 	font-family: "Geist Mono", monospace;
-	font-size: 0.8125rem;
+	font-size: 0.75rem;
 	font-weight: 500;
-	color: rgba(0, 0, 0, 0.8);
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+}
+
+.footer-marker .ttl {
+	font-weight: 700;
+}
+
+.footer-marker .tail {
+	flex: 1;
+	text-align: right;
+	color: rgba(250, 250, 249, 0.45);
+	font-size: 0.6875rem;
+	letter-spacing: 0.1em;
+}
+
+.footer-title {
+	font-family: "Geist", system-ui, sans-serif;
+	font-size: clamp(2rem, 5vw, 3.25rem);
+	font-weight: 700;
+	letter-spacing: -0.025em;
+	line-height: 1.05;
+	margin: 0;
+}
+
+.footer-title .it {
+	font-style: italic;
+	color: #ea580c;
+}
+
+.contact-links {
+	display: grid;
+}
+
+.contact-links a {
+	display: grid;
+	grid-template-columns: 5.5rem minmax(0, 1fr) auto;
+	align-items: baseline;
+	gap: 1rem;
+	padding: 0.8em 0.2em;
+	border-top: 1px solid rgba(250, 250, 249, 0.18);
+	color: rgba(250, 250, 249, 0.85);
+	font-size: 0.9375rem;
 	text-decoration: none;
-	padding: 0.4rem 1rem;
-	border-radius: 10px;
-	background: rgba(255, 255, 255, 0.25);
-	backdrop-filter: blur(12px);
-	-webkit-backdrop-filter: blur(12px);
-	border: 1px solid rgba(255, 255, 255, 0.35);
-	box-shadow:
-		0 4px 16px rgba(0, 0, 0, 0.08),
-		inset 0 1px 0 rgba(255, 255, 255, 0.3);
-	transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+	transition: color 0.25s ease, padding-left 0.3s var(--ease);
 }
 
-.footer-glass-btn:hover {
-	background: rgba(255, 255, 255, 0.4);
-	color: rgba(0, 0, 0, 0.9);
-	transform: translateY(-1px);
-	box-shadow:
-		0 6px 20px rgba(0, 0, 0, 0.12),
-		inset 0 1px 0 rgba(255, 255, 255, 0.4);
+.contact-links a:last-child {
+	border-bottom: 1px solid rgba(250, 250, 249, 0.18);
 }
 
-.footer-copy {
+.contact-links a .lbl {
 	font-family: "Geist Mono", monospace;
 	font-size: 0.6875rem;
-	color: rgba(0, 0, 0, 0.5);
-	margin: 0;
-	letter-spacing: 0.02em;
+	font-weight: 500;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	color: rgba(250, 250, 249, 0.4);
+	transition: color 0.25s ease;
+}
+
+.contact-links a .v {
+	overflow-wrap: anywhere;
+}
+
+.contact-links a::after {
+	content: "↗";
+	font-family: "Geist Mono", monospace;
+	color: #ea580c;
+	opacity: 0;
+	transform: translateX(-6px);
+	transition: opacity 0.25s ease, transform 0.25s var(--ease);
+}
+
+.contact-links a:hover,
+.contact-links a:focus-visible {
+	color: #fafaf9;
+	padding-left: 0.6em;
+}
+
+.contact-links a:hover .lbl,
+.contact-links a:focus-visible .lbl {
+	color: rgba(250, 250, 249, 0.7);
+}
+
+.contact-links a:hover::after,
+.contact-links a:focus-visible::after {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.colophon {
+	border-top: 1px solid rgba(250, 250, 249, 0.15);
+}
+
+.colophon-inner {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 1.25rem clamp(1.25rem, 5vw, 3rem);
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem 2rem;
+	justify-content: space-between;
+	font-family: "Geist Mono", monospace;
+	font-size: 0.6875rem;
+	font-weight: 500;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: rgba(250, 250, 249, 0.5);
+}
+
+@media (max-width: 760px) {
+	.footer-inner {
+		grid-template-columns: 1fr;
+		align-items: start;
+		gap: 2.25rem;
+	}
 }
 
 @media (max-width: 480px) {
-	.footer-glass-btn {
-		font-size: 0.75rem;
-		padding: 0.35rem 0.75rem;
+	.contact-links a {
+		grid-template-columns: 4.5rem minmax(0, 1fr);
+	}
+
+	.contact-links a::after {
+		display: none;
+	}
+
+	.contact-links a:hover,
+	.contact-links a:focus-visible {
+		padding-left: 0.2em;
 	}
 }
 

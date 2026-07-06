@@ -43,23 +43,41 @@ const App = () => {
 				<Projects />
 				<Resume />
 			</main>
-			<footer className="site-footer">
-				<img
-					src="/images/Scene.jpg"
-					alt="Decorative painting of mountain goats on a hillside"
-					className="footer-image"
-					width="1920"
-					height="1433"
-					loading="lazy"
-					decoding="async"
-				/>
-				<div className="footer-overlay">
-					<div className="footer-buttons">
-						<a className="footer-glass-btn" href="https://github.com/yahya3867" target="_blank" rel="noopener noreferrer">GitHub</a>
-						<a className="footer-glass-btn" href="https://www.linkedin.com/in/yahya-masri/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-						<a className="footer-glass-btn" href="https://scholar.google.com/citations?user=9H1ryOAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
+			<footer className="site-footer" id="contact">
+				<div className="footer-inner">
+					<div className="footer-head reveal">
+						<p className="footer-marker">
+							<span className="ttl">Contact</span>
+							<span className="tail">Open to interesting problems</span>
+						</p>
+						<h2 className="footer-title">
+							Build, evaluate, <span className="it">iterate.</span>
+						</h2>
 					</div>
-					<p className="footer-copy">&copy; {new Date().getFullYear()} Yahya Masri</p>
+					<div className="contact-links reveal">
+						<a href="mailto:yahya.masri@yahoo.com">
+							<span className="lbl">Email</span>
+							<span className="v">yahya.masri@yahoo.com</span>
+						</a>
+						<a href="https://github.com/yahya3867" target="_blank" rel="noopener noreferrer">
+							<span className="lbl">GitHub</span>
+							<span className="v">github.com/yahya3867</span>
+						</a>
+						<a href="https://www.linkedin.com/in/yahya-masri/" target="_blank" rel="noopener noreferrer">
+							<span className="lbl">LinkedIn</span>
+							<span className="v">linkedin.com/in/yahya-masri</span>
+						</a>
+						<a href="https://scholar.google.com/citations?user=9H1ryOAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
+							<span className="lbl">Scholar</span>
+							<span className="v">Google Scholar</span>
+						</a>
+					</div>
+				</div>
+				<div className="colophon">
+					<div className="colophon-inner">
+						<span>&copy; {new Date().getFullYear()} Yahya Masri</span>
+						<span>Fairfax, VA</span>
+					</div>
 				</div>
 			</footer>
 		</>

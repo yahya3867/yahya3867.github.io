@@ -9,27 +9,28 @@ const About = () => {
 					<h1 className="title">Yahya Masri</h1>
 					<h2 className="subtitle">Language Models & Digital Twins</h2>
 					<p>
-						Hi, my name is Yahya and I'm a third year student studying
-						computer science at George Mason University.
+						Hi, my name is Yahya and I'm a rising senior studying
+						computer science at <strong>George Mason University</strong>.
 					</p>
 					<p>
-						I'm broadly interested in evaluating language models on
-						domain-specific tasks, digital twins, and their intersection.
+						I'm broadly interested in evaluating <strong>language models</strong> on
+						domain-specific tasks, <strong>digital twins</strong>, and their intersection.
 					</p>
 					<p>
-						This summer, I'll be interning at SAP NS2 as a Language Model Intern.
+						This summer, I'm interning at <strong>SAP NS2</strong> as a Software
+						Engineer Intern on the AI Data and Observability team.
 					</p>
 					<h2 className="subtitle" style={{ marginTop: "2.25rem" }}>What I'm Working On</h2>
 					<ul className="about-project-list">
 						<li className="about-project-item">
-							Research @ the Spatiotemporal Innovation Center on a
+							Competing in the <strong>Anduril AI Grand Prix</strong>.
+						</li>
+						<li className="about-project-item">
+							Research @ the <strong>Spatiotemporal Innovation Center</strong> on a
 							Computing Infrastructure Digital Twin.
 						</li>
 						<li className="about-project-item">
-							Building Vision-Language-Action models from first principles @ <a href="https://simplevla.com" target="_blank" rel="noopener noreferrer">SimpleVLA</a>.
-						</li>
-						<li className="about-project-item">
-							Teaching C and Low-level Systems as a TA for CS262.
+							Building Vision-Language-Action models from first principles @ <a href="https://simplevla.com" target="_blank" rel="noopener noreferrer">SimpleVLA</a>, <em>whenever time allows</em>.
 						</li>
 					</ul>
 					<div className="about-links">
