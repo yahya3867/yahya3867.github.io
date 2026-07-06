@@ -1,7 +1,7 @@
 const Resume = () => {
 	return (
 		<section className="section" id="resume">
-			<h2 className="title title-large">Resume</h2>
+			<h2 className="title title-large reveal">Resume</h2>
 			<div className="resume-viewer">
 				<object
 					data="resume.pdf#view=FitH"

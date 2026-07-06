@@ -6,8 +6,11 @@ import Navbar from "./Navbar";
 import News from "./News";
 import Publications from "./Publications";
 import Resume from "./Resume";
+import useReveal from "./useReveal";
 
 const App = () => {
+	useReveal();
+
 	const [theme, setTheme] = useState(() => {
 		const stored = localStorage.getItem("theme");
 		if (stored) return stored;

@@ -16,6 +16,8 @@
 	--selection-text: #1c1917;
 	--nav-bg: rgba(250, 250, 249, 0.85);
 	--shadow: rgba(0, 0, 0, 0.08);
+	--accent-wash: rgba(194, 65, 12, 0.06);
+	--ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 [data-theme="dark"] {
@@ -34,6 +36,7 @@
 	--selection-text: #fafaf9;
 	--nav-bg: rgba(23, 20, 18, 0.85);
 	--shadow: rgba(0, 0, 0, 0.3);
+	--accent-wash: rgba(234, 88, 12, 0.09);
 }
 
 html {
@@ -164,18 +167,36 @@ nav a {
 	text-decoration: none;
 	letter-spacing: 0.01em;
 	padding: 0.25rem 0;
-	border-bottom: 1.5px solid transparent;
-	transition: color 0.15s ease, border-color 0.15s ease;
+	position: relative;
+	transition: color 0.15s ease;
+}
+
+nav a::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 100%;
+	bottom: 0;
+	height: 1.5px;
+	background: var(--text);
+	transition: right 0.3s var(--ease), background 0.15s ease;
 }
 
 nav a:hover {
 	color: var(--text);
-	border-color: var(--text);
+}
+
+nav a:hover::after {
+	right: 0;
 }
 
 nav a.active {
 	color: var(--accent);
-	border-color: var(--accent);
+}
+
+nav a.active::after {
+	right: 0;
+	background: var(--accent);
 }
 
 /* ── Theme Toggle ───────────────────────────────────── */
@@ -369,11 +390,77 @@ nav a.active {
 	}
 }
 
+/* ── Load-in Choreography ────────────────────────────── */
+
+@keyframes rise {
+	from {
+		opacity: 0;
+		transform: translateY(18px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.about-image,
+.about-content > * {
+	opacity: 0;
+	animation: rise 0.7s var(--ease) forwards;
+}
+
+.about-image { animation-delay: 0.12s; }
+.about-content > *:nth-child(1) { animation-delay: 0.06s; }
+.about-content > *:nth-child(2) { animation-delay: 0.12s; }
+.about-content > *:nth-child(3) { animation-delay: 0.18s; }
+.about-content > *:nth-child(4) { animation-delay: 0.24s; }
+.about-content > *:nth-child(5) { animation-delay: 0.3s; }
+.about-content > *:nth-child(6) { animation-delay: 0.36s; }
+.about-content > *:nth-child(7) { animation-delay: 0.42s; }
+.about-content > *:nth-child(8) { animation-delay: 0.48s; }
+
+/* ── Scroll Reveals ──────────────────────────────────── */
+
+.reveal {
+	opacity: 0;
+	transform: translateY(18px);
+	transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+}
+
+.reveal.is-visible {
+	opacity: 1;
+	transform: none;
+}
+
+.reveal-stagger > * {
+	opacity: 0;
+	transform: translateY(16px);
+	transition: opacity 0.55s var(--ease), transform 0.55s var(--ease);
+}
+
+.reveal-stagger.is-visible > * {
+	opacity: 1;
+	transform: none;
+}
+
+.reveal-stagger.is-visible > *:nth-child(2) { transition-delay: 0.08s; }
+.reveal-stagger.is-visible > *:nth-child(3) { transition-delay: 0.16s; }
+.reveal-stagger.is-visible > *:nth-child(4) { transition-delay: 0.24s; }
+.reveal-stagger.is-visible > *:nth-child(5) { transition-delay: 0.32s; }
+.reveal-stagger.is-visible > *:nth-child(6) { transition-delay: 0.4s; }
+
 /* ── News Section ────────────────────────────────────── */
 
 .news-item {
-	padding: 0.875rem 0;
+	padding: 0.875rem 0.75rem;
+	margin-inline: -0.75rem;
+	border-radius: 8px;
 	border-bottom: 1px solid var(--border-subtle);
+	transition: background 0.25s ease;
+}
+
+.news-item:hover {
+	background: var(--accent-wash);
 }
 
 .news-item:last-child {
@@ -425,8 +512,15 @@ nav a.active {
 }
 
 .pub-item {
-	padding: 1rem 0;
+	padding: 1rem 0.75rem;
+	margin-inline: -0.75rem;
+	border-radius: 8px;
 	border-bottom: 1px solid var(--border-subtle);
+	transition: background 0.25s ease;
+}
+
+.pub-item:hover {
+	background: var(--accent-wash);
 }
 
 .pub-item:last-child {
@@ -590,7 +684,13 @@ nav a.active {
 	padding: 0.1875rem 0.5rem;
 	border-radius: 4px;
 	overflow-wrap: anywhere;
-	transition: background 0.3s ease, border-color 0.3s ease;
+	transition: background 0.3s ease, border-color 0.25s ease, color 0.25s ease, transform 0.25s var(--ease);
+}
+
+.project-tech-item:hover {
+	border-color: var(--accent);
+	color: var(--accent);
+	transform: translateY(-2px);
 }
 
 .project-card-footer {
@@ -750,5 +850,14 @@ html, body {
 	*::after {
 		animation-duration: 0.01ms !important;
 		transition-duration: 0.01ms !important;
+	}
+
+	.about-image,
+	.about-content > *,
+	.reveal,
+	.reveal-stagger > * {
+		opacity: 1 !important;
+		transform: none !important;
+		animation: none !important;
 	}
 }

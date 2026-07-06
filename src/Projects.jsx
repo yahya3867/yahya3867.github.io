@@ -47,8 +47,8 @@ const PROJECTS = [
 const Projects = () => {
 	return (
 		<section className="section" id="projects">
-			<h2 className="title title-large">Projects</h2>
-			<div className="projects-grid">
+			<h2 className="title title-large reveal">Projects</h2>
+			<div className="projects-grid reveal-stagger">
 				{PROJECTS.map((project) => (
 					<ProjectCard key={project.title} {...project} />
 				))}

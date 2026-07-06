@@ -5,7 +5,7 @@ const Publications = () => {
 			venue: "Big Earth Data",
 			year: "2026",
 			link: "https://www.tandfonline.com/doi/full/10.1080/20964471.2026.2678046",
-			citations: 0,
+			citations: 1,
 		},
 		{
 			title: "Benchmarking Small Language Models and Small Reasoning Language Models on System Log Severity Classification",
@@ -19,7 +19,7 @@ const Publications = () => {
 			venue: "Cloud Computing and Data Science",
 			year: "2026",
 			link: "https://ojs.wiserpub.com/index.php/CCDS/article/view/8226/3864",
-			citations: 0,
+			citations: 1,
 		},
 		{
 			title: "Optimizing context-based location extraction by tuning open-source LLMs with RAG",
@@ -39,9 +39,9 @@ const Publications = () => {
 
 	return (
 		<section className="section" id="publications">
-			<h2 className="title title-large">Publications</h2>
-			<p className="pub-summary">
-				5 publications &middot; 13 citations &middot;{" "}
+			<h2 className="title title-large reveal">Publications</h2>
+			<p className="pub-summary reveal">
+				5 publications &middot; 15 citations &middot;{" "}
 				<a
 					href="https://scholar.google.com/citations?user=9H1ryOAAAAAJ&hl=en"
 					target="_blank"
@@ -50,9 +50,11 @@ const Publications = () => {
 					Google Scholar
 				</a>
 			</p>
-			{papers.map((paper, index) => (
-				<PubCard key={index} {...paper} />
-			))}
+			<div className="reveal-stagger">
+				{papers.map((paper, index) => (
+					<PubCard key={index} {...paper} />
+				))}
+			</div>
 		</section>
 	);
 };

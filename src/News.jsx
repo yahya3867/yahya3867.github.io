@@ -61,10 +61,12 @@ const News = () => {
 
 	return (
 		<section className="section" id="news">
-			<h2 className="title title-large">News</h2>
-			{events.map((event, index) => (
-				<Event key={index} {...event} />
-			))}
+			<h2 className="title title-large reveal">News</h2>
+			<div className="reveal-stagger">
+				{events.map((event, index) => (
+					<Event key={index} {...event} />
+				))}
+			</div>
 		</section>
 	);
 };
