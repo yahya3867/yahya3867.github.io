@@ -13,8 +13,9 @@ const About = () => {
 						computer science at <strong>George Mason University</strong>.
 					</p>
 					<p>
-						I'm broadly interested in evaluating <strong>language models</strong> on
-						domain-specific tasks, <strong>digital twins</strong>, and their intersection.
+						I'm interested in <strong>agentic systems</strong> and how language
+						models hold up on real-world, domain-specific tasks — from
+						infrastructure logs to conflict monitoring.
 					</p>
 					<p>
 						This summer, I'm interning at <strong>SAP NS2</strong> as a Software

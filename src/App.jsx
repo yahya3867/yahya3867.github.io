@@ -48,10 +48,9 @@ const App = () => {
 					<div className="footer-head reveal">
 						<p className="footer-marker">
 							<span className="ttl">Contact</span>
-							<span className="tail">Open to interesting problems</span>
 						</p>
 						<h2 className="footer-title">
-							Build, evaluate, <span className="it">iterate.</span>
+							Say <span className="it">hello.</span>
 						</h2>
 					</div>
 					<div className="contact-links reveal">
@@ -76,7 +75,7 @@ const App = () => {
 				<div className="colophon">
 					<div className="colophon-inner">
 						<span>&copy; {new Date().getFullYear()} Yahya Masri</span>
-						<span>Fairfax, VA</span>
+						<span>Washington, D.C. Area</span>
 					</div>
 				</div>
 			</footer>

@@ -1,3 +1,5 @@
+const SCHOLAR_URL = "https://scholar.google.com/citations?user=9H1ryOAAAAAJ&hl=en";
+
 const Publications = () => {
 	const papers = [
 		{
@@ -27,6 +29,7 @@ const Publications = () => {
 			year: "2025",
 			link: "https://www.tandfonline.com/doi/full/10.1080/17538947.2025.2521786",
 			citations: 9,
+			featured: true,
 		},
 		{
 			title: "Comparative analysis of BERT and GPT for classifying crisis news with Sudan conflict as an example",
@@ -37,44 +40,52 @@ const Publications = () => {
 		},
 	];
 
+	const totalCitations = papers.reduce((sum, paper) => sum + paper.citations, 0);
+
 	return (
 		<section className="section" id="publications">
 			<h2 className="title title-large reveal">Publications</h2>
-			<p className="pub-summary reveal">
-				5 publications &middot; 15 citations &middot;{" "}
-				<a
-					href="https://scholar.google.com/citations?user=9H1ryOAAAAAJ&hl=en"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Google Scholar
+			<div className="pub-stats reveal-stagger">
+				<div className="pub-stat">
+					<span className="pub-stat-fig">{papers.length}</span>
+					<span className="pub-stat-lab">Publications</span>
+				</div>
+				<div className="pub-stat pub-stat--accent">
+					<span className="pub-stat-fig">{totalCitations}</span>
+					<span className="pub-stat-lab">Citations</span>
+				</div>
+				<a className="pub-stat pub-stat--link" href={SCHOLAR_URL} target="_blank" rel="noopener noreferrer">
+					<span className="pub-stat-fig">&#8599;</span>
+					<span className="pub-stat-lab">Google Scholar</span>
 				</a>
-			</p>
-			<div className="reveal-stagger">
+			</div>
+			<div className="pub-board reveal-stagger">
 				{papers.map((paper, index) => (
-					<PubCard key={index} {...paper} />
+					<PubRow key={index} {...paper} />
 				))}
 			</div>
 		</section>
 	);
 };
 
-const PubCard = ({ title, venue, year, link, citations }) => {
+const PubRow = ({ title, venue, year, link, citations, featured }) => {
 	return (
-		<div className="pub-item">
-			<a
-				href={link}
-				target="_blank"
-				rel="noopener noreferrer"
-				className="pub-title"
-			>
-				{title}
-			</a>
-			<p className="pub-meta">
-				{venue} &middot; {year}
-				{citations > 0 && <> &middot; {citations} citation{citations !== 1 ? "s" : ""}</>}
-			</p>
-		</div>
+		<a
+			href={link}
+			target="_blank"
+			rel="noopener noreferrer"
+			className={`pub-row${featured ? " is-top" : ""}`}
+		>
+			<span className="pub-year">{year}</span>
+			<span className="pub-main">
+				{featured && <span className="pub-flag">Most cited</span>}
+				<span className="pub-title">{title}</span>
+				<span className="pub-venue">{venue}</span>
+			</span>
+			<span className={`pub-cites${citations === 0 ? " pub-cites--none" : ""}`}>
+				{citations > 0 ? `${citations} citation${citations !== 1 ? "s" : ""}` : "—"}
+			</span>
+		</a>
 	);
 };
 

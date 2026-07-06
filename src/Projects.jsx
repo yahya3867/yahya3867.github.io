@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const PROJECTS = [
 	{
 		title: "Athena",
@@ -32,16 +34,6 @@ const PROJECTS = [
 		],
 		images: ["/images/s24.jpg"],
 	},
-	{
-		title: "Glimpse",
-		description:
-			"Co-developed an AI-powered product video startup that transforms a one-sentence product description into a cinematic 12-second video using a MAS with GPT-5.1 and Sora-2-Pro agents. Implemented the core AI pipeline and backend, orchestrating GPT-5.1 agents to Sora-2-Pro through a Python/OpenAI SDK stack to generate structured prompts and production-ready video outputs.",
-		techUsed: ["Python", "OpenAI SDK", "GPT-5.1", "Sora-2-Pro"],
-		links: [
-			{ label: "Website", href: "https://tryglimpse.dev/" },
-			{ label: "Devpost", href: "https://devpost.com/software/glimpse-1v58hu" },
-		],
-	},
 ];
 
 const Projects = () => {
@@ -58,13 +50,41 @@ const Projects = () => {
 };
 
 const ProjectCard = ({ title, description, techUsed, links, images = [] }) => {
+	const [imageIndex, setImageIndex] = useState(0);
 	const hasImages = images.length > 0;
+	const hasMultiple = images.length > 1;
+
+	const showPrev = () => setImageIndex((i) => (i - 1 + images.length) % images.length);
+	const showNext = () => setImageIndex((i) => (i + 1) % images.length);
 
 	return (
 		<article className="project-card">
-			<div className={`project-media ${hasImages ? "project-media--images" : "project-media--placeholder"}`}>
+			<div className={`project-media ${hasImages ? "project-media--carousel" : "project-media--placeholder"}`}>
 				{hasImages ? (
-					images.map((src) => <img key={`${title}-${src}`} src={src} alt={`${title} project preview`} loading="lazy" />)
+					<>
+						<img
+							key={images[imageIndex]}
+							src={images[imageIndex]}
+							alt={`${title} project preview${hasMultiple ? ` (photo ${imageIndex + 1} of ${images.length})` : ""}`}
+							className="project-media-img"
+							loading="lazy"
+						/>
+						{hasMultiple && (
+							<>
+								<button type="button" className="carousel-btn carousel-btn--prev" onClick={showPrev} aria-label="Previous photo">
+									&#8249;
+								</button>
+								<button type="button" className="carousel-btn carousel-btn--next" onClick={showNext} aria-label="Next photo">
+									&#8250;
+								</button>
+								<div className="carousel-dots" aria-hidden="true">
+									{images.map((src, i) => (
+										<span key={src} className={`carousel-dot${i === imageIndex ? " is-active" : ""}`} />
+									))}
+								</div>
+							</>
+						)}
+					</>
 				) : (
 					<div className="project-media-placeholder">
 						<span>{title}</span>
