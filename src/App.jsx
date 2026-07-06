@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import "./App.css";
 import About from "./About";
 import Projects from "./Projects";
@@ -11,31 +10,12 @@ import useReveal from "./useReveal";
 const App = () => {
 	useReveal();
 
-	const [theme, setTheme] = useState(() => {
-		const stored = localStorage.getItem("theme");
-		if (stored) return stored;
-		return window.matchMedia("(prefers-color-scheme: dark)").matches
-			? "dark"
-			: "light";
-	});
-
-	useEffect(() => {
-		document.documentElement.setAttribute("data-theme", theme);
-		localStorage.setItem("theme", theme);
-		const meta = document.querySelector('meta[name="theme-color"]');
-		if (meta) meta.setAttribute("content", theme === "dark" ? "#171412" : "#fafaf9");
-	}, [theme]);
-
-	const toggleTheme = () => {
-		setTheme((prev) => (prev === "light" ? "dark" : "light"));
-	};
-
 	return (
 		<>
 			<a href="#about" className="skip-link">
 				Skip to main content
 			</a>
-			<Navbar theme={theme} toggleTheme={toggleTheme} />
+			<Navbar />
 			<main>
 				<About />
 				<News />
