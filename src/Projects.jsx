@@ -21,7 +21,7 @@ const PROJECTS = [
 			{ label: "GitHub", href: "https://github.com/yahya3867/athena" },
 			{ label: "Devpost", href: "https://devpost.com/software/demo-e2sd8z" },
 		],
-		images: ["/images/athena1.jpeg", "/images/athena2.jpeg"],
+		images: ["/images/athena-device.jpeg", "/images/athena-internals.jpeg"],
 	},
 	{
 		title: "s24",
