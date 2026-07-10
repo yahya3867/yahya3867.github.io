@@ -9,8 +9,8 @@ const About = () => {
 					<h1 className="title">Yahya Masri</h1>
 					<h2 className="subtitle">Language Models & Digital Twins</h2>
 					<p>
-						Hi, my name is Yahya and I'm a rising senior studying
-						computer science at <strong>George Mason University</strong>.
+						Hi, my name is Yahya and I'm a computer science student
+						at <strong>George Mason University</strong>.
 					</p>
 					<p>
 						I'm interested in <strong>agentic systems</strong> and how language
