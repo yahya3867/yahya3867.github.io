@@ -6,7 +6,7 @@ const News = () => {
 			date: "February 2026",
 			description: (
 				<>
-					Accepted a Language Model Intern role at SAP NS2.
+					Accepted a SWE Intern role at SAP NS2.
 				</>
 			),
 		},
