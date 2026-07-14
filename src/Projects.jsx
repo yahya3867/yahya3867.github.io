@@ -6,21 +6,21 @@ const PROJECTS = [
 		links: [{ label: "GitHub", href: "https://github.com/yahya3867/ai-grand-prix-sim" }],
 	},
 	{
-		title: "Athena",
-		description:
-			"A pocket-sized multimodal assistant that boots with the device, listens for spoken requests, responds by voice, and displays generated visuals, running continuously on a Raspberry Pi Zero 2 W.",
-		links: [
-			{ label: "GitHub", href: "https://github.com/yahya3867/athena" },
-			{ label: "Devpost", href: "https://devpost.com/software/demo-e2sd8z" },
-		],
-	},
-	{
 		title: "SimpleVLA",
 		description:
 			"A from-scratch implementation of vision-language-action models for robotic control, built up from first principles.",
 		links: [
 			{ label: "Site", href: "https://simplevla.com" },
 			{ label: "GitHub", href: "https://github.com/yahya3867/simplevla" },
+		],
+	},
+	{
+		title: "Athena",
+		description:
+			"A pocket-sized multimodal assistant that boots with the device, listens for spoken requests, responds by voice, and displays generated visuals, running continuously on a Raspberry Pi Zero 2 W.",
+		links: [
+			{ label: "GitHub", href: "https://github.com/yahya3867/athena" },
+			{ label: "Devpost", href: "https://devpost.com/software/demo-e2sd8z" },
 		],
 	},
 	{
