@@ -79,11 +79,6 @@ a:hover {
 	border-bottom-color: var(--accent-hover);
 }
 
-em {
-	font-style: italic;
-	color: var(--text);
-}
-
 strong {
 	font-weight: 600;
 }
@@ -100,16 +95,6 @@ strong {
 	letter-spacing: -0.02em;
 	line-height: 1.1;
 	margin-bottom: 0.4rem;
-}
-
-.tagline {
-	font-family: "Newsreader", Georgia, serif;
-	font-size: 1.0625rem;
-	font-weight: 400;
-	font-style: italic;
-	letter-spacing: 0;
-	color: var(--text-muted);
-	margin-bottom: 1.75rem;
 }
 
 .intro p {

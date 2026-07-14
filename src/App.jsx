@@ -36,7 +36,7 @@ const App = () => {
 						Resume
 					</a>
 				</footer>
-				<p className="colophon">&copy; {new Date().getFullYear()} Yahya Masri · Washington, D.C. Area</p>
+				<p className="colophon">&copy; {new Date().getFullYear()} Yahya Masri</p>
 			</main>
 		</>
 	);
