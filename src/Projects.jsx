@@ -1,5 +1,11 @@
 const PROJECTS = [
 	{
+		title: "Autonomous FPV Drone Racing",
+		description:
+			"An autonomous drone-racing stack built for the Anduril AI Grand Prix, integrating FPV perception, mapless control, random-course generation, and truth-based race scoring, with a reproducible pipeline for seeded races.",
+		links: [{ label: "GitHub", href: "https://github.com/yahya3867/ai-grand-prix-sim" }],
+	},
+	{
 		title: "Athena",
 		description:
 			"A pocket-sized multimodal assistant that boots with the device, listens for spoken requests, responds by voice, and displays generated visuals, running continuously on a Raspberry Pi Zero 2 W.",
