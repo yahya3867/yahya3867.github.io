@@ -1,17 +1,17 @@
 const PAPERS = [
 	{
-		title: "Digital twins as decision infrastructure: evolution, architecture, and research roadmap",
-		venue: "Big Earth Data",
-		year: "2026",
-		link: "https://www.tandfonline.com/doi/full/10.1080/20964471.2026.2678046",
-		citations: 1,
-	},
-	{
 		title: "Benchmarking Small Language Models and Small Reasoning Language Models on System Log Severity Classification",
 		venue: "MDPI Computers",
 		year: "2026",
 		link: "https://www.mdpi.com/2073-431X/15/7/430",
 		citations: 2,
+	},
+	{
+		title: "Digital twins as decision infrastructure: evolution, architecture, and research roadmap",
+		venue: "Big Earth Data",
+		year: "2026",
+		link: "https://www.tandfonline.com/doi/full/10.1080/20964471.2026.2678046",
+		citations: 1,
 	},
 	{
 		title: "Automating Data Collection to Support Conflict Analysis: Scraping the Internet for Monitoring Hourly Conflict in Sudan",

@@ -32,11 +32,11 @@ const App = () => {
 					>
 						Google Scholar
 					</a>
-					<a href="resume.pdf" target="_blank" rel="noopener noreferrer">
-						Résumé
+					<a href="Yahya_Masri_Resume.pdf" target="_blank" rel="noopener noreferrer">
+						Resume
 					</a>
 				</footer>
-				<p className="colophon">&copy; {new Date().getFullYear()} Yahya Masri — Washington, D.C. Area</p>
+				<p className="colophon">&copy; {new Date().getFullYear()} Yahya Masri · Washington, D.C. Area</p>
 			</main>
 		</>
 	);

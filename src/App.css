@@ -26,9 +26,9 @@ html {
 body {
 	background: var(--bg);
 	color: var(--text);
-	font-family: "Geist", system-ui, -apple-system, sans-serif;
-	font-size: 1.0625rem;
-	line-height: 1.7;
+	font-family: "Newsreader", Georgia, "Times New Roman", serif;
+	font-size: 1.1875rem;
+	line-height: 1.6;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -95,18 +95,19 @@ strong {
 }
 
 .name {
-	font-size: clamp(2rem, 5vw, 2.6rem);
-	font-weight: 650;
-	letter-spacing: -0.03em;
+	font-size: clamp(2.25rem, 5vw, 3rem);
+	font-weight: 600;
+	letter-spacing: -0.02em;
 	line-height: 1.1;
 	margin-bottom: 0.4rem;
 }
 
 .tagline {
-	font-family: "Geist Mono", "SF Mono", monospace;
-	font-size: 0.8125rem;
-	font-weight: 500;
-	letter-spacing: 0.02em;
+	font-family: "Newsreader", Georgia, serif;
+	font-size: 1.0625rem;
+	font-weight: 400;
+	font-style: italic;
+	letter-spacing: 0;
 	color: var(--text-muted);
 	margin-bottom: 1.75rem;
 }
@@ -127,12 +128,11 @@ strong {
 }
 
 .block-title {
-	font-family: "Geist Mono", "SF Mono", monospace;
-	font-size: 0.75rem;
+	font-family: "Newsreader", Georgia, serif;
+	font-size: 1rem;
 	font-weight: 600;
-	letter-spacing: 0.14em;
-	text-transform: uppercase;
-	color: var(--text-muted);
+	letter-spacing: -0.01em;
+	color: var(--text);
 	padding-bottom: 0.75rem;
 	margin-bottom: 1.25rem;
 	border-bottom: 1px solid var(--rule);
@@ -176,7 +176,7 @@ a.item-title:hover {
 }
 
 .item-meta {
-	font-family: "Geist Mono", "SF Mono", monospace;
+	font-family: "Newsreader", Georgia, serif;
 	font-size: 0.75rem;
 	letter-spacing: 0.02em;
 	color: var(--text-muted);
@@ -192,7 +192,7 @@ a.item-title:hover {
 	display: flex;
 	gap: 0.9rem;
 	margin-top: 0.15rem;
-	font-family: "Geist Mono", "SF Mono", monospace;
+	font-family: "Newsreader", Georgia, serif;
 	font-size: 0.75rem;
 	letter-spacing: 0.02em;
 }
@@ -214,7 +214,7 @@ a.item-title:hover {
 }
 
 .line-date {
-	font-family: "Geist Mono", "SF Mono", monospace;
+	font-family: "Newsreader", Georgia, serif;
 	font-size: 0.75rem;
 	letter-spacing: 0.02em;
 	color: var(--text-muted);
@@ -243,7 +243,7 @@ a.item-title:hover {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.6rem 1.4rem;
-	font-family: "Geist Mono", "SF Mono", monospace;
+	font-family: "Newsreader", Georgia, serif;
 	font-size: 0.8125rem;
 	letter-spacing: 0.02em;
 }
@@ -259,7 +259,7 @@ a.item-title:hover {
 
 .colophon {
 	margin-top: 2rem;
-	font-family: "Geist Mono", "SF Mono", monospace;
+	font-family: "Newsreader", Georgia, serif;
 	font-size: 0.6875rem;
 	letter-spacing: 0.08em;
 	text-transform: uppercase;

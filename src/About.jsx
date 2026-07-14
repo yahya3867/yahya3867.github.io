@@ -15,7 +15,7 @@ const Intro = () => {
 			</p>
 			<p>
 				I've published research on log-severity classification, location extraction with
-				RAG, digital twins, and crisis-news classification — mostly on getting language
+				RAG, digital twins, and crisis-news classification, mostly on getting language
 				models to hold up outside of benchmarks. Right now I'm researching a
 				computing-infrastructure digital twin at the Spatiotemporal Innovation Center and
 				building vision-language-action models at{" "}

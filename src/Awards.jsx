@@ -1,7 +1,7 @@
 const AWARDS = [
 	{
 		date: "2026",
-		text: "MLH Best Use of Solana — HackFax x PatriotHacks",
+		text: "MLH Best Use of Solana, HackFax x PatriotHacks",
 	},
 	{
 		date: "2025–2026",
