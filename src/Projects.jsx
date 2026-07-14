@@ -2,13 +2,13 @@ const PROJECTS = [
 	{
 		title: "Autonomous FPV Drone Racing",
 		description:
-			"An autonomous drone-racing stack built for the Anduril AI Grand Prix, integrating FPV perception, mapless control, random-course generation, and truth-based race scoring, with a reproducible pipeline for seeded races.",
+			"An autonomous drone-racing stack for the Anduril AI Grand Prix, combining visual gate detection, state estimation, learned control, and reproducible race simulation.",
 		links: [{ label: "GitHub", href: "https://github.com/yahya3867/ai-grand-prix-sim" }],
 	},
 	{
 		title: "SimpleVLA",
 		description:
-			"A from-scratch implementation of vision-language-action models for robotic control, built up from first principles.",
+			"An ongoing from-scratch implementation of vision-language-action models for robotic control.",
 		links: [
 			{ label: "Site", href: "https://simplevla.com" },
 			{ label: "GitHub", href: "https://github.com/yahya3867/simplevla" },

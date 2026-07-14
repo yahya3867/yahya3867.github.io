@@ -4,16 +4,12 @@ const AWARDS = [
 		text: "MLH Best Use of Solana, HackFax x PatriotHacks",
 	},
 	{
-		date: "2025–2026",
-		text: "Dean's List, George Mason University (Fall 2025, Spring 2026)",
-	},
-	{
 		date: "2026",
 		text: "Long Nguyen and Kimmy Duong School of Computing Endowed Scholarship, George Mason University",
 	},
 	{
-		date: "2026",
-		text: "ADVANCE Initiative STEM Scholarship Fund, George Mason University",
+		date: "2025–2026",
+		text: "Dean's List, George Mason University (Fall 2025, Spring 2026)",
 	},
 ];
 

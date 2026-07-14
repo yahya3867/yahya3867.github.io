@@ -163,11 +163,23 @@ a.item-title:hover {
 	color: var(--accent);
 }
 
+.item-authors {
+	font-size: 0.9375rem;
+	line-height: 1.45;
+	color: var(--text-soft);
+	margin-top: 0.15rem;
+}
+
+.item-authors .me {
+	font-weight: 600;
+}
+
 .item-meta {
 	font-family: "Newsreader", Georgia, serif;
 	font-size: 0.75rem;
 	letter-spacing: 0.02em;
 	color: var(--text-muted);
+	margin-top: 0.1rem;
 }
 
 .item-desc {
