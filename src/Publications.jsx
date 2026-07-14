@@ -11,9 +11,9 @@ const Publications = () => {
 		},
 		{
 			title: "Benchmarking Small Language Models and Small Reasoning Language Models on System Log Severity Classification",
-			venue: "arXiv Preprint",
+			venue: "MDPI Computers",
 			year: "2026",
-			link: "https://arxiv.org/abs/2601.07790",
+			link: "https://www.mdpi.com/2073-431X/15/7/430",
 			citations: 2,
 		},
 		{

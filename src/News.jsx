@@ -3,6 +3,21 @@ import Event from "./Event";
 const News = () => {
 	const events = [
 		{
+			date: "July 2026",
+			description: (
+				<>
+					Paper published in MDPI Computers:{" "}
+					<a
+						href="https://www.mdpi.com/2073-431X/15/7/430"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						"Benchmarking Small Language Models and Small Reasoning Language Models on System Log Severity Classification."
+					</a>
+				</>
+			),
+		},
+		{
 			date: "February 2026",
 			description: (
 				<>
@@ -23,22 +38,6 @@ const News = () => {
 						s24
 					</a>
 					, a fully autonomous OpenClaw AI agent that trades on Solana.
-				</>
-			),
-		},
-		{
-			date: "January 2026",
-			description: (
-				<>
-					Published preprint{" "}
-					<a
-						href="https://arxiv.org/abs/2601.07790"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						"Benchmarking Small Language Models and Small Reasoning Language Models on System Log Severity Classification"
-					</a>{" "}
-					on arXiv.
 				</>
 			),
 		},
