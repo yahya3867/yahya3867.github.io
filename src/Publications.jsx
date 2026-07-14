@@ -13,7 +13,7 @@ const PAPERS = [
 		venue: "Big Earth Data",
 		year: "2026",
 		link: "https://www.tandfonline.com/doi/full/10.1080/20964471.2026.2678046",
-		citations: 1,
+		citations: 2,
 	},
 	{
 		title: "Automating Data Collection to Support Conflict Analysis: Scraping the Internet for Monitoring Hourly Conflict in Sudan",
