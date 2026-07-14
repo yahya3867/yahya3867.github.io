@@ -1,9 +1,9 @@
 /* ── Theme ───────────────────────────────────────────── */
 
 :root {
-	--bg: #fbfbfa;
-	--text: #1a1a1a;
-	--text-soft: #3f3f3f;
+	--bg: #ffffff;
+	--text: #222222;
+	--text-soft: #222222;
 	--text-muted: #8a8a85;
 	--accent: #b4441f;
 	--accent-hover: #7f2f14;
