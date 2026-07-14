@@ -15,6 +15,15 @@ const PROJECTS = [
 		],
 	},
 	{
+		title: "SimpleVLA",
+		description:
+			"A from-scratch implementation of vision-language-action models for robotic control, built up from first principles.",
+		links: [
+			{ label: "Site", href: "https://simplevla.com" },
+			{ label: "GitHub", href: "https://github.com/yahya3867/simplevla" },
+		],
+	},
+	{
 		title: "s24",
 		description:
 			"An autonomous Solana trading agent with risk-aware execution, market-data ingestion, and a real-time operational dashboard. Winner of MLH Best Use of Solana at HackFax x PatriotHacks 2026.",

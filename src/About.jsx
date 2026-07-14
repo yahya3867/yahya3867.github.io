@@ -13,16 +13,6 @@ const Intro = () => {
 				the International Journal of Digital Earth. My research focuses on language models
 				and digital twins for infrastructure monitoring and geospatial intelligence.
 			</p>
-			<p>
-				Right now I'm building an autonomous FPV drone-racing stack for the Anduril AI Grand
-				Prix, spanning perception, mapless control, random-course generation, and
-				truth-based race scoring. I'm also developing vision-language-action models from
-				scratch at{" "}
-				<a href="https://simplevla.com" target="_blank" rel="noopener noreferrer">
-					SimpleVLA
-				</a>
-				.
-			</p>
 			<p>I like to play tennis, chess, and travel.</p>
 		</header>
 	);
