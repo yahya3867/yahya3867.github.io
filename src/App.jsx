@@ -4,6 +4,7 @@ import Projects from "./Projects";
 import Navbar from "./Navbar";
 import News from "./News";
 import Publications from "./Publications";
+import Awards from "./Awards";
 import Resume from "./Resume";
 import useReveal from "./useReveal";
 
@@ -20,6 +21,7 @@ const App = () => {
 				<About />
 				<News />
 				<Publications />
+				<Awards />
 				<Projects />
 				<Resume />
 			</main>

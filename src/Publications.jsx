@@ -29,7 +29,6 @@ const Publications = () => {
 			year: "2025",
 			link: "https://www.tandfonline.com/doi/full/10.1080/17538947.2025.2521786",
 			citations: 9,
-			featured: true,
 		},
 		{
 			title: "Comparative analysis of BERT and GPT for classifying crisis news with Sudan conflict as an example",
@@ -68,17 +67,11 @@ const Publications = () => {
 	);
 };
 
-const PubRow = ({ title, venue, year, link, citations, featured }) => {
+const PubRow = ({ title, venue, year, link, citations }) => {
 	return (
-		<a
-			href={link}
-			target="_blank"
-			rel="noopener noreferrer"
-			className={`pub-row${featured ? " is-top" : ""}`}
-		>
+		<a href={link} target="_blank" rel="noopener noreferrer" className="pub-row">
 			<span className="pub-year">{year}</span>
 			<span className="pub-main">
-				{featured && <span className="pub-flag">Most cited</span>}
 				<span className="pub-title">{title}</span>
 				<span className="pub-venue">{venue}</span>
 			</span>

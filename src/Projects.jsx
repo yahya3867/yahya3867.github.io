@@ -4,19 +4,8 @@ const PROJECTS = [
 	{
 		title: "Athena",
 		description:
-			"Built an always-on voice assistant running on a Raspberry Pi Zero 2 W with a Whisplay HAT. Press-to-talk records audio, transcribes with gpt-4o-mini-transcribe, routes intent with gpt-5-mini, streams a reply from gpt-5.4 (with optional web search), speaks via gpt-4o-mini-tts, and renders images full-screen with gpt-image-1.5. Ships as a systemd service that auto-starts on boot.",
-		techUsed: [
-			"Python",
-			"Raspberry Pi Zero 2 W",
-			"Whisplay HAT",
-			"OpenAI API",
-			"gpt-4o-mini-transcribe",
-			"gpt-5-mini",
-			"gpt-5.4",
-			"gpt-4o-mini-tts",
-			"gpt-image-1.5",
-			"systemd",
-		],
+			"A pocket-sized multimodal assistant that boots with the device, listens for spoken requests, responds by voice, and displays generated visuals — running continuously on a Raspberry Pi Zero 2 W.",
+		techUsed: ["embedded AI", "voice systems"],
 		links: [
 			{ label: "GitHub", href: "https://github.com/yahya3867/athena" },
 			{ label: "Devpost", href: "https://devpost.com/software/demo-e2sd8z" },
@@ -26,8 +15,8 @@ const PROJECTS = [
 	{
 		title: "s24",
 		description:
-			"Built a 24/7 autonomous Solana trading agent that combines trade orchestration, risk-aware execution, market data ingestion, and a real-time operational dashboard. Won MLH Best Use of Solana at HackFax x PatriotHacks 2026.",
-		techUsed: ["OpenClaw", "AWS EC2", "AWS Bedrock", "PostgreSQL", "Solana"],
+			"An autonomous Solana trading agent with risk-aware execution, market-data ingestion, and a real-time operational dashboard. Winner of MLH Best Use of Solana at HackFax x PatriotHacks 2026.",
+		techUsed: ["agents", "trading infrastructure"],
 		links: [
 			{ label: "GitHub", href: "https://github.com/akshithambekar/s24" },
 			{ label: "Devpost", href: "https://devpost.com/software/s24" },
@@ -95,7 +84,7 @@ const ProjectCard = ({ title, description, techUsed, links, images = [] }) => {
 			<div className="project-card-body">
 				<h3 className="title project-card-title">{title}</h3>
 				<p className="project-card-description">{description}</p>
-				<h4 className="project-card-label">Technologies Used</h4>
+				<h4 className="project-card-label">Focus</h4>
 				<ul className="project-tech-list">
 					{techUsed.map((tech) => (
 						<li key={`${title}-${tech}`} className="project-tech-item">

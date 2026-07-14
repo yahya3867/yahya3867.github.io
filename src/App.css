@@ -270,6 +270,32 @@ nav a.active::after {
 	border-bottom-color: var(--accent-hover);
 }
 
+.about-quicklinks {
+	display: flex;
+	gap: 1.25rem;
+	margin: 0.25rem 0 1.25rem 0;
+	flex-wrap: wrap;
+}
+
+.about-quicklinks a {
+	font-size: 0.875rem;
+	font-weight: 600;
+	color: var(--accent);
+	text-decoration: none;
+	border-bottom: 1px solid transparent;
+	transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.about-quicklinks a:hover {
+	color: var(--accent-hover);
+	border-bottom-color: var(--accent-hover);
+}
+
+.about-content p.about-current {
+	color: var(--text-tertiary);
+	font-size: 0.875rem;
+}
+
 .about-links {
 	display: flex;
 	gap: 1rem;
@@ -597,41 +623,6 @@ nav a.active::after {
 
 .pub-cites--none {
 	color: var(--text-muted);
-}
-
-.pub-flag {
-	font-family: "Geist Mono", monospace;
-	font-size: 0.625rem;
-	font-weight: 700;
-	letter-spacing: 0.18em;
-	text-transform: uppercase;
-	color: #ea580c;
-}
-
-.pub-row.is-top {
-	background: #1c1917;
-	border-bottom: none;
-	border-radius: 12px;
-	margin-block: 0.5rem;
-	padding-block: 1.35rem;
-}
-
-.pub-row.is-top .pub-title {
-	color: #fafaf9;
-}
-
-.pub-row.is-top:hover .pub-title {
-	color: #f97316;
-}
-
-.pub-row.is-top .pub-year,
-.pub-row.is-top .pub-venue {
-	color: rgba(250, 250, 249, 0.55);
-}
-
-.pub-row.is-top .pub-cites {
-	color: #f97316;
-	font-weight: 700;
 }
 
 @media (max-width: 640px) {

@@ -7,33 +7,29 @@ const About = () => {
 				</figure>
 				<div className="about-content">
 					<h1 className="title">Yahya Masri</h1>
-					<h2 className="subtitle">Language Models & Digital Twins</h2>
+					<h2 className="subtitle">AI Systems & Applied Language Models</h2>
 					<p>
-						Hi, my name is Yahya and I'm a computer science student
-						at <strong>George Mason University</strong>.
+						I'm a computer science student at <strong>George Mason University</strong> and
+						a Software Engineer Intern on <strong>SAP NS2</strong>'s AI Data and
+						Observability team.
 					</p>
 					<p>
-						I'm interested in <strong>agentic systems</strong> and how language
-						models hold up on real-world, domain-specific tasks — from
-						infrastructure logs to conflict monitoring.
+						My work spans agentic systems, infrastructure intelligence, digital
+						twins, and the evaluation of language models on domain-specific tasks.
 					</p>
-					<p>
-						This summer, I'm interning at <strong>SAP NS2</strong> as a Software
-						Engineer Intern on the AI Data and Observability team.
+					<div className="about-quicklinks">
+						<a href="#publications">Publications</a>
+						<a href="#projects">Selected Projects</a>
+						<a href="#awards">Awards</a>
+					</div>
+					<p className="about-current">
+						Currently: researching a Computing Infrastructure Digital Twin at the
+						Spatiotemporal Innovation Center, and building Vision-Language-Action
+						models at{" "}
+						<a href="https://simplevla.com" target="_blank" rel="noopener noreferrer">
+							SimpleVLA
+						</a>.
 					</p>
-					<h2 className="subtitle" style={{ marginTop: "2.25rem" }}>What I'm Working On</h2>
-					<ul className="about-project-list">
-						<li className="about-project-item">
-							Competing in the <strong>Anduril AI Grand Prix</strong>.
-						</li>
-						<li className="about-project-item">
-							Research @ the <strong>Spatiotemporal Innovation Center</strong> on a
-							Computing Infrastructure Digital Twin.
-						</li>
-						<li className="about-project-item">
-							Building Vision-Language-Action models from first principles @ <a href="https://simplevla.com" target="_blank" rel="noopener noreferrer">SimpleVLA</a>, <em>whenever time allows</em>.
-						</li>
-					</ul>
 					<div className="about-links">
 						<a
 							href="https://github.com/yahya3867"
