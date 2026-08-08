@@ -3,7 +3,7 @@ const PROJECTS = [
 		title: "Autonomous FPV Drone Racing",
 		description:
 			"An autonomous drone-racing stack for the Anduril AI Grand Prix, combining visual gate detection, state estimation, learned control, and reproducible race simulation.",
-		links: [{ label: "GitHub", href: "https://github.com/yahya3867/ai-grand-prix-sim" }],
+		links: [{ label: "GitHub", href: "https://github.com/akshithambekar/ai-grand-prix" }],
 	},
 	{
 		title: "SimpleVLA",
