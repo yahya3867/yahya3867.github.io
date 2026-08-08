@@ -13,7 +13,7 @@ const PAPERS = [
 		venue: "Big Earth Data",
 		year: "2026",
 		link: "https://www.tandfonline.com/doi/full/10.1080/20964471.2026.2678046",
-		citations: 2,
+		citations: 5,
 	},
 	{
 		title: "Automating Data Collection to Support Conflict Analysis: Scraping the Internet for Monitoring Hourly Conflict in Sudan",
@@ -29,7 +29,7 @@ const PAPERS = [
 		venue: "International Journal of Digital Earth",
 		year: "2025",
 		link: "https://www.tandfonline.com/doi/full/10.1080/17538947.2025.2521786",
-		citations: 9,
+		citations: 8,
 	},
 	{
 		title: "Comparative analysis of BERT and GPT for classifying crisis news with Sudan conflict as an example",
@@ -53,7 +53,7 @@ const Publications = () => {
 						</a>
 						<span className="item-authors">
 							{paper.authors.split("Yahya Masri").map((part, i, arr) => (
-								<span key={i}>
+								<span key={part + i}>
 									{part}
 									{i < arr.length - 1 && <span className="me">Yahya Masri</span>}
 								</span>
