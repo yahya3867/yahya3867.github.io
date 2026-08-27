@@ -5,7 +5,7 @@ const PAPERS = [
 		venue: "MDPI Computers",
 		year: "2026",
 		link: "https://www.mdpi.com/2073-431X/15/7/430",
-		citations: 2,
+		citations: 3,
 	},
 	{
 		title: "Digital twins as decision infrastructure: evolution, architecture, and research roadmap",
@@ -37,7 +37,7 @@ const PAPERS = [
 		venue: "MDPI Algorithms",
 		year: "2025",
 		link: "https://www.mdpi.com/1999-4893/18/7/420",
-		citations: 2,
+		citations: 3,
 	},
 ];
 

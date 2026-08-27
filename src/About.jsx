@@ -6,8 +6,8 @@ const Intro = () => {
 			<p>Currently working on AI systems and observability at SAP NS2.</p>
 			<p>I'm an undergraduate computer science student at George Mason University.</p>
 			<p>
-				I'm a research assistant at the NSF Spatiotemporal Innovation Center, where I've had
-				the chance to publish five papers across venues including Big Earth Data and the
+				I'm a research assistant at the NSF Spatiotemporal Innovation Center, where I've published 
+				five papers across venues including Big Earth Data and the
 				International Journal of Digital Earth. My research focuses on language models and
 				digital twins for infrastructure monitoring and geospatial intelligence.
 			</p>
