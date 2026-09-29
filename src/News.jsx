@@ -1,5 +1,9 @@
 const EVENTS = [
 	{
+		date: "August 2026",
+		text: "Joined the U.S. Naval Research Laboratory as a researcher to work on neuro-symbolic AI for capture-the-flag (CTF) as part of CS 491.",
+	},
+	{
 		date: "May 2026",
 		text: "Joined SAP NS2 as a Software Engineer Intern on the AI Data & Observability team.",
 	},
