@@ -3,7 +3,6 @@ const Intro = () => {
 		<header className="intro">
 			<h1 className="name">Yahya Masri</h1>
 			<h2 className="block-title">About Me</h2>
-			<p>Currently working on AI systems and observability at SAP NS2.</p>
 			<p>I'm a senior computer science student at George Mason University.</p>
 			<p>
 				I'm a research assistant at the NSF Spatiotemporal Innovation Center, where I've published 
