@@ -1,0 +1,50 @@
+.concepts { --sage: #879875; --pale: #f5f7ef; }
+.concept-intro,.concept-description { color: #74766b; }
+.concept-intro { margin-top: -12px; }
+.concept-tabs { display: flex; gap: 26px; margin-top: 28px; border-bottom: 1px solid #e6e9df; }
+.concept-tabs button { border: 0; border-bottom: 1px solid transparent; background: none; color: #777d6c; padding: 12px 0; cursor: pointer; text-align: left; font: inherit; font-size: 17px; }
+.concept-tabs button span { font-size: 12px; margin-right: 8px; color: #999e90; }
+.concept-tabs [aria-selected="true"] { color: #1d1d1b; border-bottom-color: #6e7e5d; }
+.concept-description { margin-top: 22px; font-size: 16px; }
+.concept-art { width: 100%; max-width: 600px; margin: 0 auto; display: block; }
+.rack-art svg { display: block; width: 100%; }
+.rack-art { max-width: 540px; margin-top: -5px; }
+.concept-art path,.concept-art rect,.concept-art circle { vector-effect: non-scaling-stroke; }
+.rack-node { cursor: pointer; }
+.rack-node:focus, .rack-node:focus-visible { outline: none; }
+.rack-node:hover > rect { stroke: #7e906b; }
+.rack-node:focus-visible > rect { stroke: #586b45; stroke-width: 2px; }
+.home-page .rack-art { max-width: 540px; margin: 10px auto 0; }
+.home-page .node-controls { margin: 0 0 30px; }
+.concept-controls { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 20px; margin: 21px 0; }
+.concept-controls button { background: none; border: 0; padding: 3px 0; color: #5d6e4d; font: inherit; font-size: 16px; text-decoration: underline; text-underline-offset: 4px; cursor: pointer; }
+.concept-controls button:hover { color: #25331b; }
+.concept-controls button:disabled { color: #a5ab9d; cursor: default; }
+.concept-controls button[aria-pressed="true"] { color: #1d1d1b; text-decoration-thickness: 2px; }
+.telemetry-panel,.globe-detail { border-top: 1px solid #e4e8dc; border-bottom: 1px solid #e4e8dc; padding: 22px 0; }
+.telemetry-heading { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; }
+.telemetry-heading h2,.globe-detail h2 { font-weight: 400; font-size: 23px; line-height: 1.4; }
+.telemetry-heading > span { font-size: 14px; }
+.healthy { color: #71875e; }.warning { color: #a07858; }
+.metric-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; margin: 20px 0 8px; }
+.metric-grid span { display: block; color: #858a7b; font-size: 14px; }
+.metric-grid strong { font-weight: 400; font-size: 29px; line-height: 1.5; font-variant-numeric: tabular-nums; }
+.metric-grid small { font-size: 16px; }
+.sparkline { width: 100%; height: 50px; display: block; }
+.concept-caption { text-align: center; color: #858a7b; font-size: 13px; line-height: 1.5; }
+.demo-status { color: #767e6b; font-size: 15px; line-height: 1.5; margin-top: 14px; }
+.rack-led { animation: activity 2s steps(2,end) infinite; }
+@keyframes activity { 50% { opacity: .35; } }
+.globe-art { touch-action: none; cursor: grab; }.globe-art.dragging { cursor: grabbing; }
+.globe-marker { cursor: pointer; }.globe-marker:focus-visible { outline: 2px solid #5d6e4d; }
+.concept-eyebrow { color: #8b947e; font-size: 13px; }
+.globe-detail h2 { margin: 3px 0 8px; }.globe-detail p { font-size: 17px; line-height: 1.6; margin-bottom: 8px; }
+.globe-detail a { font-size: 16px; }
+.flight-readout { display: flex; justify-content: space-around; gap: 15px; color: #8b947e; font-size: 14px; }
+.flight-readout strong { display: block; color: #48553b; font-size: 20px; font-weight: 400; font-variant-numeric: tabular-nums; }
+.flight-progress { height: 2px; background: #edf0e7; margin-top: 16px; }.flight-progress span { display: block; height: 100%; background: #95a97e; }
+.speed-label { font-size: 14px; color: #7b846f; }.speed-label select { background: white; border: 1px solid #dfe5d4; margin-left: 6px; padding: 2px 4px; color: #4b5b3d; font: inherit; }
+.drone-flying .drone-prop { transform-box: fill-box; transform-origin: center; animation: propeller .12s linear infinite; }
+@keyframes propeller { to { transform: rotate(180deg); } }
+@media (max-width:600px) { .concept-tabs { gap: 16px; }.concept-tabs button { font-size: 15px; }.concept-tabs button span { display: block; }.metric-grid { grid-template-columns: repeat(2,1fr); }.telemetry-heading { align-items: start; }.telemetry-heading h2 { font-size: 20px; }.concept-description { font-size: 15px; }.concept-controls { gap: 10px 16px; }.concept-controls button { font-size: 15px; } }
+@media (prefers-reduced-motion:reduce) { .rack-led,.drone-prop { animation: none !important; } }

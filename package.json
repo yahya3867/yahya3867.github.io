@@ -23,7 +23,7 @@
 	},
 	"scripts": {
 		"start": "vite",
-		"build": "vite build",
+		"build": "vite build && node scripts/build-pages.mjs",
 		"serve": "vite preview"
 	},
 	"eslintConfig": {

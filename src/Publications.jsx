@@ -37,14 +37,14 @@ const PAPERS = [
 		venue: "MDPI Algorithms",
 		year: "2025",
 		link: "https://www.mdpi.com/1999-4893/18/7/420",
-		citations: 3,
+		citations: 4,
 	},
 ];
 
-const Publications = () => {
+const Publications = ({ heading: Heading = 'h2' }) => {
 	return (
 		<section className="block" id="publications">
-			<h2 className="block-title">Publications</h2>
+			<Heading className="block-title">Publications</Heading>
 			<ul className="list">
 				{PAPERS.map((paper) => (
 					<li className="item" key={paper.link}>

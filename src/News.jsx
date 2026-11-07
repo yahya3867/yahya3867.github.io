@@ -9,10 +9,10 @@ const EVENTS = [
 	},
 ];
 
-const News = () => {
+const News = ({ heading: Heading = 'h2' }) => {
 	return (
 		<section className="block" id="news">
-			<h2 className="block-title">Recent</h2>
+			<Heading className="block-title">Recent</Heading>
 			<ul className="line-list">
 				{EVENTS.map((event, index) => (
 					<li className="line" key={index}>

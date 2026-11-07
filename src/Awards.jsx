@@ -13,10 +13,10 @@ const AWARDS = [
 	},
 ];
 
-const Awards = () => {
+const Awards = ({ heading: Heading = 'h2' }) => {
 	return (
 		<section className="block" id="awards">
-			<h2 className="block-title">Awards</h2>
+			<Heading className="block-title">Awards</Heading>
 			<ul className="line-list">
 				{AWARDS.map((award, index) => (
 					<li className="line" key={index}>

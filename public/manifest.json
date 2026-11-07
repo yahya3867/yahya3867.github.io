@@ -2,14 +2,12 @@
   "short_name": "Yahya Masri",
   "name": "Yahya Masri - Portfolio",
   "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    }
+    { "src": "/favicon.ico?v=ym", "sizes": "16x16 24x24 32x32 48x48 64x64", "type": "image/x-icon" },
+    { "src": "/logo192.png?v=ym", "sizes": "192x192", "type": "image/png" },
+    { "src": "/logo512.png?v=ym", "sizes": "512x512", "type": "image/png" }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#f7f2e7",
-  "background_color": "#f7f2e7"
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff"
 }

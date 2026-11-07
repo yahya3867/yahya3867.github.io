@@ -34,10 +34,10 @@ const PROJECTS = [
 	},
 ];
 
-const Projects = () => {
+const Projects = ({ heading: Heading = 'h2' }) => {
 	return (
 		<section className="block" id="projects">
-			<h2 className="block-title">Projects</h2>
+			<Heading className="block-title">Projects</Heading>
 			<ul className="list">
 				{PROJECTS.map((project) => (
 					<li className="item" key={project.title}>

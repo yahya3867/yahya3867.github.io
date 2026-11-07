@@ -1,0 +1,19 @@
+.desk { max-width: 500px; width: 100%; margin: 12px auto 28px; user-select: none; -webkit-user-select: none; }
+.desk-fit { position: relative; width: 100%; aspect-ratio: 450 / 420; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+.desk .desk-svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.desk-svg path,.desk-svg rect,.desk-svg circle,.desk-svg ellipse { vector-effect: non-scaling-stroke; }
+.pc-edge { fill: none; stroke: #b4b4b8; stroke-width: .6px; stroke-linecap: round; stroke-linejoin: round; }
+.pc-faint { stroke: #d4d4d6; }
+.pc-cord { stroke: #96969a; stroke-width: 1.1px; }
+.pc-key,.pc-hotspot { cursor: pointer; }
+.pc-key[data-down] .pc-edge { stroke: #66666b; }
+.pc-screen-text { fill: #1d1d1b; font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-size: 5.2px; letter-spacing: .02em; }
+.pc-cursor { animation: pc-blink 1.06s steps(1,end) infinite; }
+.desk-input { position: absolute; left: 33%; top: 19%; width: 24%; height: 25%; opacity: 0; pointer-events: none; font-size: 16px; border: 0; padding: 0; background: transparent; color: transparent; caret-color: transparent; }
+.desk-input:focus-visible { outline: 2px solid #1d1d1b; outline-offset: 2px; border-radius: 6px; opacity: 1; }
+.pc-sr,.pc-power-accessible { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.pc-power-accessible:focus-visible { clip-path: none; width: auto; height: auto; margin: 0; bottom: 0; left: 50%; transform: translateX(-50%); padding: 4px 8px; background: white; color: #1d1d1b; }
+@keyframes pc-blink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .pc-cursor { animation: none; } }
+.pc-reduce-motion .pc-cursor { animation: none; }
+@media (max-width:600px) { .desk { margin: 12px auto 28px; } }
