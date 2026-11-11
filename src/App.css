@@ -12,7 +12,7 @@ button, input { font: inherit; }
 .skip-link:focus { top: .5rem; }
 .page { max-width: 880px; margin: auto; padding: 35px 40px 40px; }
 .name { font-size: 20px; font-weight: 400; line-height: 30px; letter-spacing: -0.3px; }
-.intro .intro-line { font-size: 20px; line-height: 30px; letter-spacing: -0.3px; margin: 0; max-width: 650px; }
+.intro .intro-line { font-size: 20px; line-height: 30px; letter-spacing: -0.3px; margin: 0 0 28px; max-width: 650px; }
 .intro p { margin-bottom: .7rem; }
 .intro-nav { display: flex; flex-wrap: wrap; gap: 10px 30px; margin-top: 24px; font-size: 20px; }
 .block { margin-top: 46px; }

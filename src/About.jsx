@@ -1,4 +1,3 @@
-import { ServerRack } from "./Concepts";
 import BrandMark from "./BrandMark";
 
 const Intro = () => {
@@ -6,7 +5,6 @@ const Intro = () => {
 		<header className="intro">
 			<h1 className="name"><BrandMark />Yahya Masri</h1>
 			<p className="intro-line">I work on language models, digital twins, and AI systems that interact with the world.</p>
-			<ServerRack />
 			<p>I'm a senior computer science student at George Mason University.</p>
 			<p>
 				I'm a research assistant at the NSF Spatiotemporal Innovation Center, where I've published
