@@ -2,7 +2,6 @@ import "./App.css";
 import Intro from "./About";
 import Publications from "./Publications";
 import Projects from "./Projects";
-import Awards from "./Awards";
 import News from "./News";
 import BrandMark from "./BrandMark";
 import Concepts from "./Concepts";
@@ -11,7 +10,6 @@ const pages = {
  concepts: { title: "Interactive concepts", Component: Concepts },
  publications: { title: "Publications", Component: Publications },
  projects: { title: "Projects", Component: Projects },
- awards: { title: "Awards", Component: Awards },
  recent: { title: "Recent", Component: News },
  contact: { title: "Get in touch", Component: Contact },
 };

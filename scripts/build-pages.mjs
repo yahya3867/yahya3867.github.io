@@ -2,7 +2,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 
 // Real HTML entry points allow direct visits and refreshes on GitHub Pages.
 const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
-const pages = { concepts: 'Interactive concepts', publications: 'Publications', projects: 'Projects', awards: 'Awards', recent: 'Recent', contact: 'Get in touch' };
+const pages = { concepts: 'Interactive concepts', publications: 'Publications', projects: 'Projects', recent: 'Recent', contact: 'Get in touch' };
 for (const [slug, title] of Object.entries(pages)) {
  const directory = new URL(`../dist/${slug}/`, import.meta.url);
  await mkdir(directory, { recursive: true });

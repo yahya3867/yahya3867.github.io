@@ -16,7 +16,6 @@ const Intro = () => {
 			<nav className="intro-nav" aria-label="Explore my work">
 				<a href="/publications">Publications</a>
 				<a href="/projects">Projects</a>
-				<a href="/awards">Awards</a>
 				<a href="/recent">Recent</a>
 				<a href="/contact">Get in touch ↗</a>
 
