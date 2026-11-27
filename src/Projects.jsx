@@ -2,11 +2,8 @@ const PROJECTS = [
 	{
 		title: "Global Conflict Agentic Digital Twin (GCADT)",
 		description:
-			"Maps conflict events from news reports and lets readers ask questions about mapped incidents by voice.",
-		links: [
-			{ label: "Site", href: "https://www.gcadt.org/" },
-			{ label: "GitHub (private)", href: "https://github.com/stccenter/Autonomous-Map-Making-from-Unstructured-Text-Using-LLMs-RAG-and-Knowledge-Graphs" },
-		],
+			"Uses LLMs to identify and validate conflict events in news reports, then plots them on an interactive map in real time.",
+		links: [{ label: "Site", href: "https://www.gcadt.org/" }],
 	},
 	{
 		title: "Aro",
