@@ -1,5 +1,23 @@
 const PROJECTS = [
 	{
+		title: "Global Conflict Agentic Digital Twin (GCADT)",
+		description:
+			"Maps conflict events from news reports and lets readers ask questions about mapped incidents by voice.",
+		links: [
+			{ label: "Site", href: "https://www.gcadt.org/" },
+			{ label: "GitHub (private)", href: "https://github.com/stccenter/Autonomous-Map-Making-from-Unstructured-Text-Using-LLMs-RAG-and-Knowledge-Graphs" },
+		],
+	},
+	{
+		title: "Aro",
+		description:
+			"Specialist agents investigate supply shortages and propose transfers for an operator to approve. Placed 3rd overall at Patriot Hackfest Fall 2026.",
+		links: [
+			{ label: "Site", href: "https://tryaro.app" },
+			{ label: "GitHub", href: "https://github.com/yahya3867/ARO" },
+		],
+	},
+	{
 		title: "Autonomous FPV Drone Racing",
 		description:
 			"An autonomous drone-racing stack for the Anduril AI Grand Prix, combining visual gate detection, state estimation, learned control, and reproducible race simulation.",
