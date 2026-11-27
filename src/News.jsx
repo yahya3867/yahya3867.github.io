@@ -13,7 +13,7 @@ const EVENTS = [
 	},
 	{
 		date: "February 2026",
-		text: <>Won MLH Best Use of Solana at HackFax x PatriotHacks for <a href="https://devpost.com/software/s24">s24</a>, an autonomous trading agent. I worked on the backend trading API.</>,
+		text: <>Won MLH Best Use of Solana at HackFax x PatriotHacks for <a href="https://devpost.com/software/s24">s24</a>, an autonomous trading agent.</>,
 	},
 ];
 

@@ -26,8 +26,8 @@ button, input { font: inherit; }
 .item-meta { font-size: 14px; color: var(--text-muted); }
 .item-desc { color: var(--text-soft); font-size: 16px; line-height: 1.55; }
 .item-links { display: inline-flex; gap: 14px; font-size: 14px; }
-.line-list { gap: 16px; }
-.line { display: grid; grid-template-columns: 100px minmax(0, 1fr); gap: 18px; align-items: baseline; }
+.line-list { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 16px 24px; }
+.line { display: grid; grid-column: 1 / -1; grid-template-columns: subgrid; align-items: baseline; }
 .line-date { font-size: 14px; color: var(--text-muted); }
 .line-text { font-size: 16px; color: var(--text-soft); }
 .contact { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 55px; font-size: 18px; }
@@ -37,7 +37,8 @@ button, input { font: inherit; }
  .intro .intro-line, .name { font-size: 20px; }
  .intro-nav { gap: 10px 22px; font-size: 18px; }
  .block { margin-top: 38px; }
- .line { grid-template-columns: 1fr; gap: 2px; }
+ .line-list { grid-template-columns: minmax(0, 1fr); }
+ .line { row-gap: 2px; }
  .contact { gap: 10px 22px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
@@ -60,4 +61,3 @@ body { font-size: 16px; line-height: 1.55; letter-spacing: normal; }
 .detail-page .line-date,
 .detail-page .item-links { font-size: 14px; line-height: 23.8px; }
 .detail-page .list { gap: 19.8px; }
-.detail-page .line-list { gap: 9px; }
